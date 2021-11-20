@@ -4,8 +4,6 @@ import '../../styles/headerStyles.css';
 import Burger from "./Burger";
 import Linker from "./Linker";
 import "../../styles/queries.css";
-//import styled from 'styled-components';
-
 
 var canAnimate = true;
 // For some reason, couldn't use a hook in the function Header().

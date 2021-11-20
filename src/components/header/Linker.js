@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Link = styled.div`
     transition: all 0.5s;
-    color: ${props => props.theme.burger}
+    color: ${props => props.theme.headerLink}
 `
 
 function Linker(props) {

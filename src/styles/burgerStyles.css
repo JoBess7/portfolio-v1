@@ -79,10 +79,20 @@
         transform: scale(1);
     }
     to {
-        transform: scale(1.04);
+        transform: scale(0);
     }
 }
-
+.a2Back {
+    animation: a2Back .15s ease-out forwards 1;
+}
+@keyframes a2Back {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
 
 
 /* ------------------------ Arrow Bottom ------------------------- */

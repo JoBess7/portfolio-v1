@@ -23,7 +23,7 @@ function Burger(props) {
             }}>
 
             <Arrow className={`arrow a1 ${burgerOpened ? "animArrow1" : "a1Back"}`}></Arrow>
-            <Arrow className={`arrow a2 ${burgerOpened ? "animArrow2" : ""}`}></Arrow>
+            <Arrow className={`arrow a2 ${burgerOpened ? "animArrow2" : "a2Back"}`}></Arrow>
             <Arrow className={`arrow a3 ${burgerOpened ? "animArrow3" : "a3Back"}`}></Arrow>
         </div>
     );
