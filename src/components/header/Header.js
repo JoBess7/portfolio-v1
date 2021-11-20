@@ -1,15 +1,20 @@
 import DarkModeToggle from "react-dark-mode-toggle";
 import React, {useState} from "react";
-import '../styles/headerStyles.css'
+import '../../styles/headerStyles.css';
+import Burger from "./Burger";
+import Linker from "./Linker";
+import "../../styles/queries.css";
 //import styled from 'styled-components';
 
 
 var canAnimate = true;
-// For some reason, couldn't use a hook here.
+// For some reason, couldn't use a hook in the function Header().
 // Might want to check that out later.
 
 function Header(props) {
-    const [isDarkMode, setIsDarkMode] = useState(false);
+
+    const [isDarkMode, setIsDarkMode] = useState(true);
+    const [burgerOpened, setBurgerOpened] = useState(false);
 
 
     function animateButton() {
@@ -19,13 +24,20 @@ function Header(props) {
         }, 450);
     }
 
+    function sendBurgerState() {
+        setBurgerOpened(!burgerOpened);
+    }
 
     return (
         <header>
+            <div className="burger-flex">
+                <Burger sendBurgerState={sendBurgerState} theme={props.theme}/>
+                <Linker burgerOpened={burgerOpened}/>
+            </div>
+
             <DarkModeToggle
                 className="darkModeToggler"
                 onChange={() => {
-                    console.log(canAnimate);
                     if(canAnimate) {
                         animateButton();
                         props.changeTheme();

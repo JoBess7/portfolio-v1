@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: min-content;
+}
+
+.main > :nth-child(-n+2) {
+    margin-right: 30px;
+
+}
+
+.link {
+    font-family: 'Varela Round', sans-serif;
+    cursor: pointer;
+}
+
+.linkAppear {
+    opacity: 0;
+    animation: linkAppear .3s ease-in-out forwards 1;
+}
+
+@keyframes linkAppear {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.linkDisappear {
+    animation: linkDisappear .3s ease-in-out forwards 1;
+}
+
+@keyframes linkDisappear {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}

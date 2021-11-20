@@ -1,13 +1,19 @@
 header {
     /* position: fixed; */
-    width: 100vw;
-    height: 150px;
+    width: 90%;
+    height: 100px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 .darkModeToggler {
     margin-right: 40px;
+}
+
+.burger-flex {
+    display: flex;
+    flex-direction: row;
+    
 }

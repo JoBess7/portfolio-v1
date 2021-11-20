@@ -1,0 +1,8 @@
+@media screen 
+and (max-width: 600px) {
+    .darkModeToggler {margin-right: 10px !important;}
+    .burger {display: none;}
+    .link {opacity: 1;}
+    .linkAppear {animation: none;}
+    .linkDisappear {animation: none;}
+}

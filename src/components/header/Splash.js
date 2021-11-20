@@ -4,6 +4,7 @@ import styled from "styled-components";
 const Page = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100vw;
     transition: all 0.5s;
     background: ${props => props.theme.pageBackground}
@@ -19,6 +20,7 @@ function Splash(props) {
     return (
         <Page>
             <Header theme={props.theme} changeTheme={changeTheme}/>
+           
         </Page>
     );
 }
