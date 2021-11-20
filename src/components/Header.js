@@ -1,10 +1,12 @@
-import '../styles/headerStyle.css';
 import DarkModeToggle from "react-dark-mode-toggle";
 import React, {useState} from "react";
+//import styled from 'styled-components';
 
 
-function Header() {
+
+function Header(props) {
     const [isDarkMode, setIsDarkMode] = useState(false);
+
     return (
         <header>
             <DarkModeToggle
@@ -15,5 +17,6 @@ function Header() {
         </header>
     );
 }
+
 
 export default Header;
