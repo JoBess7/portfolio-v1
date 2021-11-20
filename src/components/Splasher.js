@@ -1,7 +1,5 @@
 import Header from "./Header";
-import {useState} from 'react';
 import styled from "styled-components";
-import DarkModeToggle from "react-dark-mode-toggle";
 
 const Page = styled.div`
     display: flex;
@@ -13,24 +11,14 @@ const Page = styled.div`
 
 function Splash(props) {
 
-    const [isDarkMode, setIsDarkMode] = useState(false);
-
     function changeTheme() {
         if(props.theme === 'light') props.setTheme('dark');
         else props.setTheme('light');
-
-        setIsDarkMode(!isDarkMode);
     }
 
     return (
         <Page>
-            <Header theme={props.theme}/>
-            <DarkModeToggle
-                onChange={changeTheme}
-                checked={isDarkMode}
-                size={80}
-            />
- 
+            <Header theme={props.theme} changeTheme={changeTheme}/>
         </Page>
     );
 }

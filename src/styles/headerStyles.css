@@ -1,0 +1,13 @@
+header {
+    /* position: fixed; */
+    width: 100vw;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.darkModeToggler {
+    margin-right: 40px;
+}

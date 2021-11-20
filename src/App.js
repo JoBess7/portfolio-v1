@@ -1,10 +1,10 @@
 import './App.css';
 import {useState} from 'react';
 import {ThemeProvider} from "styled-components";
-import Splash from './components/SplashScreen';
+import Splash from './components/Splasher';
 
 const LightTheme = {
-  pageBackground: 'white',
+  pageBackground: '#DCDCDC',
   titleColor: 'df658b',
   tagLineColor: 'black'
 }
