@@ -1,5 +1,15 @@
 import Header from "./Header";
 import styled from "styled-components";
+import Main from "../main/Main";
+
+/* Header styles */
+import "../../styles/burgerStyles.css";
+import "../../styles/headerStyles.css";
+import "../../styles/linkerStyles.css";
+import "../../styles/queries.css";
+
+/* Container1 styles */
+import "../../styles/mainStyles.css";
 
 const Page = styled.div`
     display: flex;
@@ -19,8 +29,8 @@ function Splash(props) {
 
     return (
         <Page>
-            <Header theme={props.theme} changeTheme={changeTheme}/>
-           
+            <Header changeTheme={changeTheme}/>
+            <Main/>
         </Page>
     );
 }

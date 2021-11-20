@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
-.main {
+.linker-flex {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: min-content;
 }
 
-.main > :nth-child(-n+2) {
+.linker-flex > :nth-child(-n+2) {
     margin-right: 30px;
 
 }

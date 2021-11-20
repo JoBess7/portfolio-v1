@@ -6,3 +6,8 @@ and (max-width: 600px) {
     .linkAppear {animation: none;}
     .linkDisappear {animation: none;}
 }
+
+@media screen 
+and (max-width: 380px) {
+    .linker-flex {display: none;} 
+}

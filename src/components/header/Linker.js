@@ -1,4 +1,3 @@
-import "../../styles/linkerStyles.css";
 import styled from "styled-components";
 
 const Link = styled.div`
@@ -21,7 +20,7 @@ function Linker(props) {
     };
     
     return (
-        <div className="main">
+        <div className="linker-flex">
             <Link style={firstLinkStyle} className={`link ${burgerOpened ? "linkAppear" : "linkDisappear"}`}>About</Link>
             <Link style={secndLinkStyle} className={`link ${burgerOpened ? "linkAppear" : "linkDisappear"}`}>Resume</Link>
             <Link style={thirdLinkStyle} className={`link ${burgerOpened ? "linkAppear" : "linkDisappear"}`}>Projects</Link> 

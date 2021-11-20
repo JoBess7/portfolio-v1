@@ -1,13 +1,17 @@
 import DarkModeToggle from "react-dark-mode-toggle";
 import React, {useState} from "react";
-import '../../styles/headerStyles.css';
 import Burger from "./Burger";
 import Linker from "./Linker";
-import "../../styles/queries.css";
+import styled from "styled-components";
 
 var canAnimate = true;
 // For some reason, couldn't use a hook in the function Header().
 // Might want to check that out later.
+
+const HeaderFlex = styled.div`
+    transition: all 0.5s;
+    background-color: ${props => props.theme.headerBackground}
+`
 
 function Header(props) {
 
@@ -27,7 +31,7 @@ function Header(props) {
     }
 
     return (
-        <header>
+        <HeaderFlex className="header">
             <div className="burger-flex">
                 <Burger sendBurgerState={sendBurgerState} theme={props.theme}/>
                 <Linker burgerOpened={burgerOpened}/>
@@ -46,7 +50,7 @@ function Header(props) {
                 size={70}
                 speed={2}
             />
-        </header>
+        </HeaderFlex>
     );
 }
 
