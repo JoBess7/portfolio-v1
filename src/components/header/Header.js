@@ -3,16 +3,19 @@ import React, {useState} from "react";
 import Burger from "./Burger";
 import Linker from "./Linker";
 import styled from "styled-components";
+import { WEBSITE_WIDTH, DELTA_HEADER } from "../../assets/constants";
 
 var canAnimate = true;
 // For some reason, couldn't use a hook in the function Header().
 // Might want to check that out later.
 
-const DELTA_HEADER = 150;
 
 const HeaderFlex = styled.div`
     transition: all 0.5s;
     background-color: ${props => props.theme.headerBackground}
+`
+const HeaderContainer = styled.div`
+    width: ${WEBSITE_WIDTH}%;
 `
 
 function Header(props) {
@@ -60,24 +63,26 @@ function Header(props) {
 
     return (
         <HeaderFlex className={`header ${headerClasses}`}>
-            <div className="burger-flex">
-                <Burger sendBurgerState={sendBurgerState} theme={props.theme}/>
-                <Linker burgerOpened={burgerOpened}/>
-            </div>
+            <HeaderContainer className="header-container">
+                <div className="burger-flex">
+                    <Burger sendBurgerState={sendBurgerState} theme={props.theme}/>
+                    <Linker burgerOpened={burgerOpened}/>
+                </div>
 
-            <DarkModeToggle
-                className="darkModeToggler"
-                onChange={() => {
-                    if(canAnimate) {
-                        animateButton();
-                        props.changeTheme();
-                        setIsDarkMode(!isDarkMode);
-                    }
-                }}
-                checked={isDarkMode}
-                size={70}
-                speed={2.6}
-            />
+                <DarkModeToggle
+                    className="darkModeToggler"
+                    onChange={() => {
+                        if(canAnimate) {
+                            animateButton();
+                            props.changeTheme();
+                            setIsDarkMode(!isDarkMode);
+                        }
+                    }}
+                    checked={isDarkMode}
+                    size={70}
+                    speed={2.6}
+                />
+            </HeaderContainer>
         </HeaderFlex>
     );
 }

@@ -1,7 +1,17 @@
+html, body {overflow-x: hidden;}
+
 .header {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 85px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-container {
+    height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -9,7 +19,7 @@
 }
 
 .darkModeToggler {
-    margin-right: 40px;
+
 }
 
 .burger-flex {

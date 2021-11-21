@@ -6,6 +6,7 @@ and (max-width: 600px) {
     .linker-flex {margin-left: 20px;}
     .linkAppear {animation: none;}
     .linkDisappear {animation: none;}
+    .header-container {width: 90% !important}
 }
 
 @media screen 
