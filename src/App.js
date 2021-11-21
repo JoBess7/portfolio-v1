@@ -6,13 +6,13 @@ import Splash from './components/header/Splash';
 const LightTheme = {
   pageBackground: '#F0FFF0',
   headerLink: "#282c36",
-  headerBackground: "#F0FFF0",
+  headerBackground: "#E0EFE0",
   tagLineColor: 'black',
   burger: "#00BFFF"
 }
 
 const DarkTheme = {
-  pageBackground: '#282c36',
+  pageBackground: '#2F333F',
   headerLink: "#FFFAFA",
   headerBackground: "#282c36",
   tagLineColor: 'lavender',

@@ -1,8 +1,7 @@
 .header {
     position: fixed;
     width: 100%;
-    padding: 0 5vw 0 5vw;
-    height: 100px;
+    height: 85px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -24,13 +23,13 @@
     animation: headerReduce .3s ease-out forwards 1;
 }
 @keyframes headerReduce {
-    from {height: 100px;}
-    to {height: 70px;}
+    from {height: 85px;}
+    to {height: 60px;}
 }
 .headerExpand {
     animation: headerExpand .3s ease-out forwards 1;
 }
 @keyframes headerExpand {
-    from {height: 70px;}
-    to {height: 100px;}
+    from {height: 60px;}
+    to {height: 85px;}
 }

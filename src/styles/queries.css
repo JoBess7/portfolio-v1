@@ -1,8 +1,9 @@
 @media screen 
 and (max-width: 600px) {
-    .darkModeToggler {margin-right: 10px !important;}
+    .darkModeToggler {margin-right: 15px;}
     .burger {display: none;}
     .link {opacity: 1;}
+    .linker-flex {margin-left: 20px;}
     .linkAppear {animation: none;}
     .linkDisappear {animation: none;}
 }
