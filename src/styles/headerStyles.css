@@ -18,15 +18,15 @@ html, body {overflow-x: hidden;}
     justify-content: space-between;
 }
 
-.darkModeToggler {
-
-}
-
 .burger-flex {
     display: flex;
     flex-direction: row;   
 }
 
+.socials-toggler-flex {
+    display: flex;
+    flex-direction: row;
+}
 
 
 .headerReduce {

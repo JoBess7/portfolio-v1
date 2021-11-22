@@ -1,3 +1,4 @@
+/* ---------------- HEADER --------------------- */
 @media screen 
 and (max-width: 600px) {
     .darkModeToggler {margin-right: 15px;}
@@ -8,8 +9,20 @@ and (max-width: 600px) {
     .linkDisappear {animation: none;}
     .header-container {width: 90% !important}
 }
-
 @media screen 
 and (max-width: 380px) {
     .linker-flex {display: none;} 
+}
+
+
+
+/* ---------------- CONTAINER1 --------------------- */
+@media screen
+and (max-height: 700px) {
+    .main-container1 {height: 700px !important;}
+}
+
+@media screen 
+and (min-height: 2000px) {
+    .main-container1 {height: 2000px;}
 }

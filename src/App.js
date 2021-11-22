@@ -1,7 +1,7 @@
 import './App.css';
 import {useState} from 'react';
 import {ThemeProvider} from "styled-components";
-import Splash from './components/header/Splash';
+import Splash from './components/Splash';
 
 const LightTheme = {
   pageBackground: '#F0FFF0',

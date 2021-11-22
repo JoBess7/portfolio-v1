@@ -1,15 +1,15 @@
-import Header from "./Header";
+import Header from "./header/Header";
 import styled from "styled-components";
-import Main from "../main/Main";
+import Main from "./main/Main";
 
 /* Header styles */
-import "../../styles/burgerStyles.css";
-import "../../styles/headerStyles.css";
-import "../../styles/linkerStyles.css";
-import "../../styles/queries.css";
+import "../styles/burgerStyles.css";
+import "../styles/headerStyles.css";
+import "../styles/linkerStyles.css";
+import "../styles/queries.css";
 
 /* Container1 styles */
-import "../../styles/mainStyles.css";
+import "../styles/mainStyles.css";
 
 const Page = styled.div`
     display: flex;

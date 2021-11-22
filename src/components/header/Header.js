@@ -1,9 +1,12 @@
 import DarkModeToggle from "react-dark-mode-toggle";
+import { DarkModeSwitch } from "react-toggle-dark-mode";
 import React, {useState} from "react";
 import Burger from "./Burger";
 import Linker from "./Linker";
 import styled from "styled-components";
-import { WEBSITE_WIDTH, DELTA_HEADER } from "../../assets/constants";
+import { HEADER_WIDTH, DELTA_HEADER } from "../../assets/constants";
+import Socials from "./Socials";
+import { defaultProperties } from "../../assets/themeTogglerProperties";
 
 var canAnimate = true;
 // For some reason, couldn't use a hook in the function Header().
@@ -15,7 +18,7 @@ const HeaderFlex = styled.div`
     background-color: ${props => props.theme.headerBackground}
 `
 const HeaderContainer = styled.div`
-    width: ${WEBSITE_WIDTH}%;
+    width: ${HEADER_WIDTH}%;
 `
 
 function Header(props) {
@@ -30,7 +33,7 @@ function Header(props) {
         canAnimate = false;
         setTimeout(function() {
             canAnimate = true;
-        }, 450);
+        }, 400);
     }
 
     function sendBurgerState() {
@@ -69,19 +72,24 @@ function Header(props) {
                     <Linker burgerOpened={burgerOpened}/>
                 </div>
 
-                <DarkModeToggle
-                    className="darkModeToggler"
-                    onChange={() => {
-                        if(canAnimate) {
-                            animateButton();
-                            props.changeTheme();
-                            setIsDarkMode(!isDarkMode);
-                        }
-                    }}
-                    checked={isDarkMode}
-                    size={70}
-                    speed={2.6}
-                />
+                <div className="socials-toggler-flex">
+                    <Socials theme={props}/>
+
+                    <DarkModeSwitch
+                        animationProperties={defaultProperties}
+                        className="darkModeToggler"
+                        onChange={() => {
+                            if(canAnimate) {
+                                animateButton();
+                                props.changeTheme();
+                                setIsDarkMode(!isDarkMode);
+                            }
+                        }}
+                        checked={isDarkMode}
+                        size={30}
+                        speed={5}
+                    />
+                </div>
             </HeaderContainer>
         </HeaderFlex>
     );
