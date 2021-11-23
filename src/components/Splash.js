@@ -9,6 +9,7 @@ import "../styles/headerStyles.css";
 import "../styles/linkerStyles.css";
 import "../styles/burgerStyles.css";
 import "../styles/socialsStyles.css";
+import "../styles/projectStyles.css";
 
 /* Container styles */
 import "../styles/mainStyles.css";

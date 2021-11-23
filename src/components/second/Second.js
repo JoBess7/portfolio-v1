@@ -1,43 +1,41 @@
-import { useRef, useEffect, useState } from "react";
-
-
-function useOnScreen(options) {
-    const [ref, setRef] = useState(null);
-    const [visible, setVisible] = useState(false);
-
-    useEffect(() => {
-
-        const observer = new IntersectionObserver(([entry]) => {
-            setVisible(entry.isIntersecting);
-        }, options);
-
-        if(ref) {
-            observer.observe(ref);
-        }
-
-        return () => {
-            if(ref) {
-                observer.unobserve(ref);
-            }
-        };
-
-    }, [ref, options]);
-
-    return [setRef, visible];
-
-}
+import Project from "./Project";
+import { useInView } from "react-intersection-observer"; 
 
 export default function Second() {
-    const [setRef, visible] = useOnScreen({
+
+    var index = -1;
+    const { ref1, inView1 } = useInView({
         threshold: 0.5
-    })
+    });
+
+    const { ref2, inView2 } = useInView({
+        threshold: 0.5
+    });
+
+    const { ref3, inView3 } = useInView({
+        threshold: 0.5
+    });
+
+
+
 
     return  (
-        <div 
+        <div
             className="sectionTwo"
-            ref={setRef}
-            style={{backgroundColor: visible ? "#23cebd" : "#efefef"}}>
-
+            ref={ref1}
+            >
+                <Project 
+                    index={++index} 
+                    last={false}
+                />
+                <Project 
+                    index={++index} 
+                    last={false}
+                />
+                <Project 
+                    index={++index} 
+                    last={true}
+                />
         </div>
     );
 }

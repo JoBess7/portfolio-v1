@@ -8,6 +8,7 @@ html, body {overflow-x: hidden;}
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    z-index: 999;
 }
 
 .header-container {

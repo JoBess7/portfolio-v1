@@ -2,7 +2,6 @@ import './App.css';
 import {useState} from 'react';
 import {ThemeProvider} from "styled-components";
 import Splash from './components/Splash';
-import { THEME_TOGGLE_SPEED } from './assets/constants';
 
 const LightTheme = {
   pageBackground: '#F0FFF0',

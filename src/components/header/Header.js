@@ -1,11 +1,9 @@
-import DarkModeToggle from "react-dark-mode-toggle";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import React, {useState} from "react";
 import Burger from "./Burger";
 import Linker from "./Linker";
 import styled from "styled-components";
 import { HEADER_WIDTH, DELTA_HEADER, THEME_TOGGLE_SPEED } from "../../assets/constants";
-import Socials from "./Socials";
 import { defaultProperties } from "../../assets/themeTogglerProperties";
 
 var canAnimate = true;
