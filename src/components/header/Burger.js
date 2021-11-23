@@ -1,9 +1,9 @@
 import {useState} from 'react';
 import styled from 'styled-components';
-import "../../styles/burgerStyles.css";
+import { THEME_TOGGLE_SPEED } from '../../assets/constants';
 
 const Arrow = styled.div`
-    transition: all 0.5s;
+    transition: all ${THEME_TOGGLE_SPEED}s;
     background-color: ${props => props.theme.burger}
 `
 

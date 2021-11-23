@@ -50,14 +50,14 @@
     }
     to {
         transform: rotate(-45deg);
-        top: calc(100% - 50% - 1px);
+        top: calc(100% - 50% - 2px);
         left: calc(100% - 65%);
     }
 }
 @keyframes a1Back {
     from {
         transform: rotate(-45deg);
-        top: calc(100% - 50% - 1px);
+        top: calc(100% - 50% - 2px);
         left: calc(100% - 65%);
     }
     to {

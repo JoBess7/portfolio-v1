@@ -6,17 +6,24 @@ import Main from "./main/Main";
 import "../styles/burgerStyles.css";
 import "../styles/headerStyles.css";
 import "../styles/linkerStyles.css";
-import "../styles/queries.css";
+import "../styles/burgerStyles.css";
+import "../styles/socialsStyles.css";
 
-/* Container1 styles */
+/* Container styles */
 import "../styles/mainStyles.css";
+import "../styles/secondStyles.css"
+
+/* Queries */
+import "../styles/_queries.css";
+
+import { THEME_TOGGLE_SPEED } from "../assets/constants";
 
 const Page = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    transition: all 0.5s;
+    transition: all ${THEME_TOGGLE_SPEED}s;
     background: ${props => props.theme.pageBackground}
 `
 

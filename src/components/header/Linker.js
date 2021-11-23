@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { THEME_TOGGLE_SPEED } from "../../assets/constants";
 
 const Link = styled.div`
-    transition: all 0.5s;
+    transition: all ${THEME_TOGGLE_SPEED}s;
     color: ${props => props.theme.headerLink}
 `
 
