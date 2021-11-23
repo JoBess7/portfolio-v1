@@ -1,6 +1,7 @@
 import Header from "./header/Header";
 import styled from "styled-components";
 import Main from "./main/Main";
+import Second from "./second/Second";
 
 /* Header styles */
 import "../styles/burgerStyles.css";
@@ -38,6 +39,7 @@ function Splash(props) {
         <Page>
             <Header changeTheme={changeTheme}/>
             <Main/>
+            <Second/>
         </Page>
     );
 }
