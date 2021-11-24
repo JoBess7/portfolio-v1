@@ -1,5 +1,6 @@
 import React, { useLayoutEffect, useState } from 'react';
 import Project from "./Project";
+import { PROJECTS } from '../../assets/constants';
 
 function GetWindowSize() {
     const [size, setSize] = useState([0, 0]);
@@ -7,7 +8,11 @@ function GetWindowSize() {
 
     useLayoutEffect(() => {
         function updateSize() {
-            setSize([window.innerWidth, window.innerHeight]);
+
+            const screenWidth = window.innerWidth;
+            const screenHeight = window.innerHeight;
+            
+            setSize([screenWidth, screenHeight]);
         }
 
         window.addEventListener("resize", updateSize);
@@ -22,46 +27,35 @@ function GetWindowSize() {
 
 export default function Second() {
 
-    const [projectWidth, projectHeight] = GetWindowSize();
+    const [screenWidth, screenHeight] = GetWindowSize();
 
     const options = {
-        max: 10,
+        max: 7,
         perspective: 1000,
         scale: 1.05,
       }
 
     const defaultStyles = {
         borderRadius: "14px 14px 14px 14px",
-        marginTop: "100px",
-        height: projectHeight/2,
-        width: projectWidth/2,
+        marginTop: "40px",
         cursor: "pointer",
     }
 
     return  (
         <div className="works-section">
-                <Project 
-                    title={"iGem ULaval 2021"}
-                    style={
-                        defaultStyles
-                    }
-                    options={options}
-                />
-                <Project 
-                    style={
-                        defaultStyles
-                    }
-                    options={options}
-                />
-                <Project
-                    style={
-                        Object.assign(
-                            defaultStyles, 
-                            {marginBottom: "100px"}
-                        )
-                    }
-                    options={options}
-                />
+            <div className="works-container">
+                {PROJECTS.map((project, index) => {
+                    return (
+                        <Project 
+                        json={PROJECTS[index]}
+                        style={
+                            defaultStyles
+                        }
+                        options={options}
+                        />
+                    );
+                })};
+            </div>
         </div>
     );
 }

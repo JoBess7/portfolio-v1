@@ -1,6 +1,5 @@
-import './App.css';
 import {useState} from 'react';
-import {ThemeProvider, createGlobalStyle} from "styled-components";
+import {ThemeProvider} from "styled-components";
 import Splash from './components/Splash';
 
 const LightTheme = {
@@ -9,16 +8,18 @@ const LightTheme = {
   headerBackground: "",
   tagLineColor: 'black',
   burger: "#000",
-  projectBackground: "#e6f2ff"
+  projectBackground: "#e6f2ff",
+  projectDescription: "#282c36"
 }
 
 const DarkTheme = {
   pageBackground: '#0E141B',
-  headerLink: "#FFFAFA",
+  headerLink: "#E0E3E6",
   headerBackground: "#0E141B",
   tagLineColor: 'lavender',
   burger: "#EEEFF0",
-  projectBackground: "#DCDCDC"
+  projectBackground: "#1E262F",
+  projectDescription: "#E0E3E6"
 }
 
 const themes = {

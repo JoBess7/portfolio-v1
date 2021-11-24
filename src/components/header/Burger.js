@@ -19,6 +19,8 @@ function Burger(props) {
         <div className="burger"
             onClick={() => {
                 burgerOnClick();
+
+                // Sends burger state to its parent (Header)
                 props.sendBurgerState();
             }}>
 

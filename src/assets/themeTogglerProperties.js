@@ -1,4 +1,6 @@
-export const defaultProperties = {
+// Specifies the options for the night-to-day button.
+
+export const themeTogglerProperties = {
     dark: {
       circle: {
         r: 9,

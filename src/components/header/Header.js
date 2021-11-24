@@ -4,12 +4,7 @@ import Burger from "./Burger";
 import Linker from "./Linker";
 import styled from "styled-components";
 import { HEADER_WIDTH, DELTA_HEADER, THEME_TOGGLE_SPEED } from "../../assets/constants";
-import { defaultProperties } from "../../assets/themeTogglerProperties";
-
-var canAnimate = true;
-// For some reason, couldn't use a hook in the function Header().
-// Might want to check that out later.
-
+import { themeTogglerProperties } from "../../assets/themeTogglerProperties";
 
 const HeaderFlex = styled.div`
     transition: all ${THEME_TOGGLE_SPEED}s;
@@ -21,6 +16,7 @@ const HeaderContainer = styled.div`
 
 function Header(props) {
 
+    const [canAnimate, setCanAnimate] = useState(true);
     const [isDarkMode, setIsDarkMode] = useState(true);
     const [burgerOpened, setBurgerOpened] = useState(false);
     const [headerClasses, setHeaderClasses] = useState("headerExpand");
@@ -28,9 +24,9 @@ function Header(props) {
 
 
     function animateButton() {
-        canAnimate = false;
+        setCanAnimate(false);
         setTimeout(function() {
-            canAnimate = true;
+            setCanAnimate(true);
         }, 400);
     }
 
@@ -71,7 +67,7 @@ function Header(props) {
                 </div>
 
                 <DarkModeSwitch
-                    animationProperties={defaultProperties}
+                    animationProperties={themeTogglerProperties}
                     className="darkModeToggler"
                     onChange={() => {
                         if(canAnimate) {

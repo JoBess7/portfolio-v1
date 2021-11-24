@@ -166,10 +166,7 @@ class Project extends Component {
         onMouseMove={this.handleMouseMove}
         onMouseLeave={this.handleMouseLeave}
       >
-          <ProjectContent
-            title={this.props.title}>
-                
-          </ProjectContent>
+          <ProjectContent json={this.props.json}/>
       </ProjectContainer>
     )
   }

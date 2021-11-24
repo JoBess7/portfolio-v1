@@ -26,3 +26,9 @@ and (max-height: 700px) {
 and (min-height: 2000px) {
     .main-container1 {height: 2000px;}
 }
+
+/* ---------------- CONTAINER3 --------------------- */
+@media screen
+and (max-width: 1300px) {
+    .works-container {display: flex; flex-direction: column;}
+}

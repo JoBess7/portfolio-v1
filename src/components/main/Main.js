@@ -1,8 +1,6 @@
 import AboutText from "./AboutText";
 
 function Main() {
-
-
     return(
 
         <div>

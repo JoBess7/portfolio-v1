@@ -1,6 +1,4 @@
 import { useInView } from "react-intersection-observer";
-import { useState } from "react/cjs/react.development";
-
 
 export default function AboutText(props) {
 
@@ -9,7 +7,7 @@ export default function AboutText(props) {
 
     }
 
-    const { ref, inView, entry } = useInView({
+    const { ref, inView } = useInView({
         threshold: 0,
         triggerOnce: true,
     }) 
