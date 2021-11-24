@@ -10,6 +10,7 @@ import React, { Component } from 'react'
 import { findDOMNode } from 'react-dom'
 import styled from 'styled-components';
 import { THEME_TOGGLE_SPEED } from '../../assets/constants';
+import ProjectContent from './ProjectContent';
 
 const ProjectContainer = styled.div`
     transition: all ${THEME_TOGGLE_SPEED}s;
@@ -165,7 +166,10 @@ class Project extends Component {
         onMouseMove={this.handleMouseMove}
         onMouseLeave={this.handleMouseLeave}
       >
-        {this.props.children}
+          <ProjectContent
+            title={this.props.title}>
+                
+          </ProjectContent>
       </ProjectContainer>
     )
   }

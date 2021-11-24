@@ -1,10 +1,12 @@
-
-
+import AboutText from "./AboutText";
 
 function Main() {
+
+
     return(
-        <div className="main-container1">
-            dd
+
+        <div>
+            <AboutText/>
         </div>
 
     );

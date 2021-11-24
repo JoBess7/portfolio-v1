@@ -41,6 +41,7 @@ export default function Second() {
     return  (
         <div className="works-section">
                 <Project 
+                    title={"iGem ULaval 2021"}
                     style={
                         defaultStyles
                     }
@@ -50,6 +51,7 @@ export default function Second() {
                     style={
                         defaultStyles
                     }
+                    options={options}
                 />
                 <Project
                     style={
@@ -58,6 +60,7 @@ export default function Second() {
                             {marginBottom: "100px"}
                         )
                     }
+                    options={options}
                 />
         </div>
     );

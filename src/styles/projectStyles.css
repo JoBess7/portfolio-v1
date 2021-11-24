@@ -1,7 +1,18 @@
 .square {
     box-shadow: 1px 1px 1px rgba(24, 18, 18, 0.249); 
+    padding: 10px;
 }
 
 .square:hover {
     box-shadow: 5px 5px 5px rgba(24, 18, 18, 0.536); 
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    font-family: "Wotfard-SemiBold";
+    font-size: 25px;
 }

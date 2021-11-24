@@ -1,4 +1,23 @@
 .main-container1 {
     width: 100vw;
-    height: 100vh;
+    height: 300px;
+}
+
+.about-text {
+    position: relative;
+    transition: transform 1s ease, opacity .9s ease;
+    transition-delay: 1s;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.textDown {
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.textUp {
+    transform: translateY(0px);
+    opacity: 1;
 }

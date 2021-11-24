@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Main from "./main/Main";
 import Second from "./second/Second";
 
+import "../styles/appStyles.css";
+
 /* Header styles */
 import "../styles/burgerStyles.css";
 import "../styles/headerStyles.css";

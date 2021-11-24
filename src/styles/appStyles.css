@@ -1,7 +1,15 @@
 @font-face {
-    font-family: 'VarelaRound-Regular';
-    src: local('VarelaRound-Regular'),
-        url(../assets/fonts/VarelaRound-Regular.ttf)
+    font-family: 'Wotfard-Regular';
+    src: local('Wotfard-Regular'),
+        url(../assets/fonts/Wotfard-Regular.ttf)
+        format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Wotfard-SemiBold';
+    src: local('Wotfard-SemiBold'),
+        url(../assets/fonts/Wotfard-SemiBold.ttf)
         format('truetype');
     font-weight: normal;
 }
