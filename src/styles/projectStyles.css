@@ -1,18 +1,7 @@
 .square {
-    width: 70%;
-    height: 200px;
-    border: 1px solid red;
-    margin-top: 100px;
-    cursor: pointer;
-    transition: all 0.6s;
-    transform: perspective(100px);
-    position: relative;
+    box-shadow: 1px 1px 1px rgba(24, 18, 18, 0.249); 
 }
 
-.toInitialState {
-    transform: rotateX(0) rotateY(0) !important;
-}
-
-.appear {
-    left: 15%;
+.square:hover {
+    box-shadow: 5px 5px 5px rgba(24, 18, 18, 0.536); 
 }

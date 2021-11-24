@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-
 .linker-flex {
     display: flex;
     flex-direction: row;
@@ -13,7 +11,7 @@
 }
 
 .link {
-    font-family: 'Varela Round', sans-serif;
+    font-family: "VarelaRound-Regular";
     cursor: pointer;
 }
 

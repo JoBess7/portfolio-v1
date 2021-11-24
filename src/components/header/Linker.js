@@ -20,11 +20,32 @@ function Linker(props) {
         animationDelay: `${burgerOpened ? ".20s" : ".02s"}`
     };
     
+    function scrollElementIntoView(className) {
+        document.querySelector(className).scrollIntoView({behavior: "smooth"});
+    }
+
     return (
         <div className="linker-flex">
-            <Link style={firstLinkStyle} className={`link ${burgerOpened ? "linkAppear" : "linkDisappear"}`}>About</Link>
-            <Link style={secndLinkStyle} className={`link ${burgerOpened ? "linkAppear" : "linkDisappear"}`}>Resume</Link>
-            <Link style={thirdLinkStyle} className={`link ${burgerOpened ? "linkAppear" : "linkDisappear"}`}>Projects</Link> 
+            <Link 
+                onClick={() => scrollElementIntoView(".about-section")} 
+                style={firstLinkStyle} 
+                className={`link ${burgerOpened ? "linkAppear" : "linkDisappear"}`}>
+                    About
+            </Link>
+
+            <Link
+                onClick={() => scrollElementIntoView(".skills-section")} 
+                style={secndLinkStyle}
+                className={`link ${burgerOpened ? "linkAppear" : "linkDisappear"}`}>
+                    Skills
+            </Link> 
+
+            <Link 
+                onClick={() => scrollElementIntoView(".works-section")} 
+                style={thirdLinkStyle} 
+                className={`link ${burgerOpened ? "linkAppear" : "linkDisappear"}`}>
+                    Works
+            </Link>
         </div>
     );
 }

@@ -1,40 +1,63 @@
+import React, { useLayoutEffect, useState } from 'react';
 import Project from "./Project";
-import { useInView } from "react-intersection-observer"; 
+
+function GetWindowSize() {
+    const [size, setSize] = useState([0, 0]);
+
+
+    useLayoutEffect(() => {
+        function updateSize() {
+            setSize([window.innerWidth, window.innerHeight]);
+        }
+
+        window.addEventListener("resize", updateSize);
+        updateSize();
+
+        return () => window.removeEventListener("resize", updateSize);
+    }, []);
+
+    return size;
+
+}
 
 export default function Second() {
 
-    var index = -1;
-    const { ref1, inView1 } = useInView({
-        threshold: 0.5
-    });
+    const [projectWidth, projectHeight] = GetWindowSize();
 
-    const { ref2, inView2 } = useInView({
-        threshold: 0.5
-    });
+    const options = {
+        max: 10,
+        perspective: 1000,
+        scale: 1.05,
+      }
 
-    const { ref3, inView3 } = useInView({
-        threshold: 0.5
-    });
-
-
-
+    const defaultStyles = {
+        borderRadius: "14px 14px 14px 14px",
+        marginTop: "100px",
+        height: projectHeight/2,
+        width: projectWidth/2,
+        cursor: "pointer",
+    }
 
     return  (
-        <div
-            className="sectionTwo"
-            ref={ref1}
-            >
+        <div className="works-section">
                 <Project 
-                    index={++index} 
-                    last={false}
+                    style={
+                        defaultStyles
+                    }
+                    options={options}
                 />
                 <Project 
-                    index={++index} 
-                    last={false}
+                    style={
+                        defaultStyles
+                    }
                 />
-                <Project 
-                    index={++index} 
-                    last={true}
+                <Project
+                    style={
+                        Object.assign(
+                            defaultStyles, 
+                            {marginBottom: "100px"}
+                        )
+                    }
                 />
         </div>
     );
