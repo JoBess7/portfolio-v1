@@ -8,7 +8,7 @@ const LightTheme = {
   headerBackground: "",
   tagLineColor: 'black',
   burger: "#000",
-  projectBackground: "#e6f2ff",
+  projectBackground: "#1E262F",
   projectDescription: "#282c36"
 }
 
@@ -19,7 +19,7 @@ const DarkTheme = {
   tagLineColor: 'lavender',
   burger: "#EEEFF0",
   projectBackground: "#1E262F",
-  projectDescription: "#E0E3E6"
+  projectDescription: "#ffffff"
 }
 
 const themes = {

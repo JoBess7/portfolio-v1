@@ -4,7 +4,7 @@ import FillingButton from "./FillingButton";
 
 const Title = styled.div`
     transition: all ${THEME_TOGGLE_SPEED}s;
-    color: ${props => props.theme.headerLink}
+    color: ${props => props.theme.projectDescription}
 `
 
 const Description = styled.div`
@@ -14,14 +14,12 @@ const Description = styled.div`
 
 export default function ProjectContent(props) {
 
-    // Destructure the props.
+    // Destructure the prop.
     const {json} = props;
 
-    // Get information on current project.
-    const title = json.title;
-    const description = json.description;
-    const fillButtonColor = json.fillUp;
-    const imageURL = json.imageURL;
+    // Get information on current project by destructuring.
+    const {title, description, fillButtonColor, imageURL, link, github} = json;
+
 
     return (
         <div className="project-content">
@@ -29,16 +27,36 @@ export default function ProjectContent(props) {
                 <Title className="project-title">
                     {title}
                 </Title>
-
-                <FillingButton
-                    fillColor={fillButtonColor}/>
             </div>
 
-            <Description className="project-description">
-                {description}
-            </Description>
+            <div className="desc-img-flex">
+                <Description className="project-description">
+                    {description}
+                
+                    <br/><br/>
+                    
+                    { // Conditional statement: renders a link if one was specified in props.
+                        link != "" &&
+                        <div className="project-link-container">
+                            Check it out here: <a href={link} className="project-link">{link}</a>
+                        </div>
+                    }
 
-            <img className="project-img" alt="" src={require("../../assets/images/igem_logo.svg")}></img>
+                    <br/><br/>
+
+                    { // Conditional statement: renders a link if one was specified in props.
+                        github != "" &&
+                        <FillingButton
+                            text={"Github Repository"}
+                            link={github}
+                        />
+                        
+                    }
+                    
+                </Description>
+            
+                <img className="project-img" alt="" src={imageURL}></img>
+            </div>
         </div>
     );
 }

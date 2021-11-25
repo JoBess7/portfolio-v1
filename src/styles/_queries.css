@@ -32,3 +32,8 @@ and (min-height: 2000px) {
 and (max-width: 1300px) {
     .works-container {display: flex; flex-direction: column;}
 }
+@media screen
+and (max-width: 600px) {
+    .square {width: 280px;}
+    .project-img {display: none;}
+}

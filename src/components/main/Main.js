@@ -3,8 +3,8 @@ import AboutText from "./AboutText";
 function Main() {
     return(
 
-        <div>
-            <AboutText/>
+        <div style={{height:"1000px"}}>
+
         </div>
 
     );

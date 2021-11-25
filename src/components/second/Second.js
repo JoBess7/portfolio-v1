@@ -1,6 +1,7 @@
 import React, { useLayoutEffect, useState } from 'react';
 import Project from "./Project";
 import { PROJECTS } from '../../assets/constants';
+import FillingButton from './FillingButton';
 
 function GetWindowSize() {
     const [size, setSize] = useState([0, 0]);
@@ -44,6 +45,7 @@ export default function Second() {
                 {PROJECTS.map((project, index) => {
                     return (
                         <Project 
+                        key={index}
                         json={PROJECTS[index]}
                         style={
                             defaultStyles
