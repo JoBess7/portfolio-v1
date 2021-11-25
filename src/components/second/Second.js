@@ -27,8 +27,6 @@ function GetWindowSize() {
 
 export default function Second() {
 
-    const [screenWidth, screenHeight] = GetWindowSize();
-
     const options = {
         max: 7,
         perspective: 1000,
@@ -38,7 +36,6 @@ export default function Second() {
     const defaultStyles = {
         borderRadius: "14px 14px 14px 14px",
         marginTop: "40px",
-        cursor: "pointer",
     }
 
     return  (

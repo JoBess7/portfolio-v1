@@ -20,18 +20,25 @@ export default function ProjectContent(props) {
     // Get information on current project.
     const title = json.title;
     const description = json.description;
+    const fillButtonColor = json.fillUp;
+    const imageURL = json.imageURL;
 
     return (
         <div className="project-content">
-            <Title className="project-title">
-                {title}
-            </Title>
+            <div className="title-flex">
+                <Title className="project-title">
+                    {title}
+                </Title>
 
-            <FillingButton/>
+                <FillingButton
+                    fillColor={fillButtonColor}/>
+            </div>
 
             <Description className="project-description">
                 {description}
             </Description>
+
+            <img className="project-img" alt="" src={require("../../assets/images/igem_logo.svg")}></img>
         </div>
     );
 }

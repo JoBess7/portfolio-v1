@@ -7,16 +7,19 @@ export const PROJECTS = [
     {
         title: "iGem ULaval 2021",
         description: "Description here",
-        imageUrl: ""
+        imageURL: "../../assets/images/igem_logo.svg",
+        fillUp: "#253633",
     },
     {
         title: "iGem ULaval 2021",
         description: "Description here",
-        imageUrl: ""
+        imageURL: "../../assets/images/igem_logo.svg",
+        fillUp: "#383353",
     },
     {
         title: "iGem ULaval 2021",
         description: "Description here",
-        imageUrl: ""
+        imageURL: "../../assets/images/igem_logo.svg",
+        fillUp: "#233263",
     }
 ]
