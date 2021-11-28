@@ -2,7 +2,7 @@
 import igemLogo from './images/igem_logo.svg';
 
 
-export const HEADER_WIDTH = 90;
+export const HEADER_WIDTH = 95;
 export const DELTA_HEADER = 150;
 export const THEME_TOGGLE_SPEED = 0.5;
 export const PROJECTS = [

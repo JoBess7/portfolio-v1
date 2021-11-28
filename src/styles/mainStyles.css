@@ -1,6 +1,55 @@
-.main-container1 {
+.main {
+    height: 100vh;
     width: 100vw;
-    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-flex {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.6s;
+    transition-delay: .2s;
+}
+
+.main-down {
+    transform: translateY(500px);
+    opacity: 0;
+}
+
+.main-up {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.keeper {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    height: 1px;
+}
+
+.my-name-is {
+    font-family: "Wotfard-Regular";
+    padding-bottom: 25px;
+    font-size: 24px;
+}
+
+.name {
+    font-family: "Wotfard-SemiBold";
+    padding-bottom: 25px;
+    font-size: 80px;
+}
+
+.main-desc {
+    font-family: "Wotfard-Regular";
+    padding-bottom: 50px;
+    font-size: 22px;
+    width: 40%;
+    text-align: justify;
 }
 
 .about-text {
@@ -21,3 +70,4 @@
     transform: translateY(0px);
     opacity: 1;
 }
+

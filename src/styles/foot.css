@@ -1,0 +1,53 @@
+.foot {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    height: 200px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    left: 0;
+}
+
+.foot-flex {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.foot-icon-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foot-line {
+    width: 2px;
+    height: calc(100%);
+    background-color: grey;
+}
+
+.icon-container {
+    height: 30px;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    padding-bottom: 10px;
+}
+
+.icon {
+    z-index: -1;
+    position: relative;
+    bottom: 0;
+    transition: all 0.3s;    
+    transform: translateY(0px);
+}
+
+.icon-anim-up {
+    transform: translateY(-6px);
+}
+
+

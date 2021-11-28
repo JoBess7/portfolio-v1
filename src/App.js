@@ -9,17 +9,23 @@ const LightTheme = {
   tagLineColor: 'black',
   burger: "#000",
   projectBackground: "#1E262F",
-  projectDescription: "#282c36"
+  projectDescription: "#282c36",
+  blue: "#1b71c2",
+  lightBlue: "#bbcde5",
+  gray: "#dfdfdf"
 }
 
 const DarkTheme = {
-  pageBackground: '#0E141B',
+  pageBackground: 'rgba(0, 4, 11, 0.97)',
   headerLink: "#E0E3E6",
   headerBackground: "#0E141B",
   tagLineColor: 'lavender',
   burger: "#EEEFF0",
-  projectBackground: "#1E262F",
-  projectDescription: "#ffffff"
+  projectBackground: "white",
+  projectDescription: "#000",
+  blue: "#1b71c2",
+  lightBlue: "#dee6f0",
+  grey: "#dfdfdf"
 }
 
 const themes = {

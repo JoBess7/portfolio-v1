@@ -45,6 +45,7 @@ export default function Second() {
                 {PROJECTS.map((project, index) => {
                     return (
                         <Project 
+                        className="project-mobile"
                         key={index}
                         json={PROJECTS[index]}
                         style={

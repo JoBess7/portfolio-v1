@@ -14,18 +14,45 @@ and (max-width: 380px) {
     .linker-flex {display: none;} 
 }
 
-
+/* ------------------- FOOT ------------------------ */
+@media screen 
+and (max-width: 1000px) {
+    .foot {display: none !important;}
+}
 
 /* ---------------- CONTAINER1 --------------------- */
 @media screen
 and (max-height: 700px) {
-    .main-container1 {height: 700px !important;}
+    .main {height: 700px !important;}
 }
 
 @media screen 
 and (min-height: 2000px) {
-    .main-container1 {height: 2000px;}
+    .main {height: 2000px;}
 }
+
+@media screen 
+and (max-width: 1400px) {
+    .main-flex {width: 70%;}
+    .main-desc {width: 55%;}
+}
+
+@media screen 
+and (max-width: 1000px) {
+    .main-desc {width: 70%;}
+    .name {font-size: 55px;}
+    .main-desc {font-size: 18px;}
+}
+
+@media screen 
+and (max-width: 500px) {
+    .main-desc {width: 100%;}
+    .my-name-is {font-size: 20px;}
+    .name {font-size: 40px;}
+    .main-desc {font-size: 18px;}
+}
+
+
 
 /* ---------------- CONTAINER3 --------------------- */
 @media screen

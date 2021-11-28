@@ -21,7 +21,17 @@ html, body {overflow-x: hidden;}
 
 .burger-flex {
     display: flex;
-    flex-direction: row;   
+    flex-direction: row; 
+    transition: all 0.5s;  
+    transition-delay: 1s;
+}
+
+.header-hidden-comp {
+    opacity: 0;
+}
+
+.header-show-comp {
+    opacity: 1;
 }
 
 .socials-toggler-flex {
@@ -29,7 +39,12 @@ html, body {overflow-x: hidden;}
     flex-direction: row;
 }
 
+.darkModeToggler {
+    transition: opacity 0.5s;  
+    transition-delay: 1s;
+}
 
+/*
 .headerReduce {
     animation: headerReduce .3s ease-out forwards 1;
 }
@@ -44,6 +59,7 @@ html, body {overflow-x: hidden;}
     from {height: 60px;}
     to {height: 85px;}
 }
+*/
 
 .burger {
     width: 35px;
@@ -55,6 +71,53 @@ html, body {overflow-x: hidden;}
     flex-direction: column;
     justify-content: center;
 }
+
+
+#small{
+    transform-origin: center;
+    transition: all 0.5s ease-out;
+}
+
+.heart-not-active {
+    transform: scale(.05);
+}
+
+.heart-active {
+    animation: heart-activate .4s ease-in forwards 1;
+}
+
+@keyframes heart-activate {
+    0% {transform: scale(.05);}
+    85% {transform: scale(10);}
+    100% {transform: scale(9.5);}
+}
+
+.heart-already-active {
+    animation: heart-already-active .4s ease-out forwards 1;
+}
+
+@keyframes heart-already-active {
+    0% {transform: scale(9.5);}
+    50% {transform: scale(11);}
+    100% {transform: scale(9.5);}
+}
+
+.heart-stroke {
+    transition: all 0.5s;
+}
+
+.initial-stroke {
+    stroke-width: 2px;
+    fill: white;
+}
+
+.activated-stroke {
+    stroke-width: 0px;
+    fill: rgb(255, 0, 0);
+}
+
+
+
 
 /* ------------------------ Children -------------------------- */
 
@@ -192,6 +255,7 @@ html, body {overflow-x: hidden;}
 .linker-flex {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     width: min-content;
 }

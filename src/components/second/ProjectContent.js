@@ -32,26 +32,6 @@ export default function ProjectContent(props) {
             <div className="desc-img-flex">
                 <Description className="project-description">
                     {description}
-                
-                    <br/><br/>
-                    
-                    { // Conditional statement: renders a link if one was specified in props.
-                        link != "" &&
-                        <div className="project-link-container">
-                            Check it out here: <a href={link} className="project-link">{link}</a>
-                        </div>
-                    }
-
-                    <br/><br/>
-
-                    { // Conditional statement: renders a link if one was specified in props.
-                        github != "" &&
-                        <FillingButton
-                            text={"Github Repository"}
-                            link={github}
-                        />
-                        
-                    }
                     
                 </Description>
             
