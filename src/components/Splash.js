@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./header/Header";
 import styled from "styled-components";
 import Main from "./main/Main";
 import Second from "./second/Second";
 import Foot from "./foot/Foot";
+import DatabaseController from "../database/DatabaseController";
 // import AnimatedCursor from "react-animated-cursor";
 
 import "../styles/appStyles.css";
@@ -22,6 +23,7 @@ import "../styles/_queries.css";
 import "../styles/foot.css";
 
 import { THEME_TOGGLE_SPEED } from "../assets/constants";
+import { useState } from "react/cjs/react.development";
 
 const Page = styled.div`
     display: flex;
@@ -34,16 +36,24 @@ const Page = styled.div`
 
 export default function Splash(props) {
 
+    const [databaseController, setDatabaseController] = useState(null);
     const {theme} = props;
 
     function changeTheme() {
         if(theme === 'light') props.setTheme('dark');
         else props.setTheme('light');
     }
+    
+    useEffect(() => {
+        setDatabaseController(new DatabaseController());
+    }, []);
 
     return (
         <Page>
-            <Header changeTheme={changeTheme}/>
+            <Header 
+                changeTheme={changeTheme}
+                databaseController={databaseController}
+            />
             <Main/>
             <Second/>
             <Foot

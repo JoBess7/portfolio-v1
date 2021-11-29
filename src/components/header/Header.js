@@ -73,23 +73,24 @@ function Header(props) {
                     <Linker burgerOpened={burgerOpened}/>
                 </div>
 
-                <Heart/>
-
-                <DarkModeSwitch
-                    animationProperties={themeTogglerProperties}
-                    ref={ref}
-                    className={inView ? "darkModeToggler header-show-comp" : "darkModeToggler header-hidden-comp"}
-                    onChange={() => {
-                        if(canAnimate) {
-                            animateButton();
-                            props.changeTheme();
-                            setIsDarkMode(!isDarkMode);
-                        }
-                    }}
-                    checked={isDarkMode}
-                    size={30}
-                    speed={5}
-                />
+                <div ref={ref} className={inView ? "heart-flex header-show-comp" : "heart-flex header-hidden-comp"}>
+                    <Heart databaseController={props.databaseController}/>
+                    <DarkModeSwitch
+                        animationProperties={themeTogglerProperties}
+                        className={"darkModeToggler"}
+                        onChange={() => {
+                            if(canAnimate) {
+                                animateButton();
+                                props.changeTheme();
+                                setIsDarkMode(!isDarkMode);
+                            }
+                        }}
+                        checked={isDarkMode}
+                        size={30}
+                        speed={5}
+                    />
+                    
+                </div>
             </HeaderContainer>
         </HeaderFlex>
     );
