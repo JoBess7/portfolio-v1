@@ -1,5 +1,3 @@
-html, body {overflow-x: hidden;}
-
 .header {
     position: fixed;
     width: 100vw;
@@ -289,7 +287,7 @@ html, body {overflow-x: hidden;}
 }
 
 .initial-stroke {
-    stroke-width: 2px;
+    stroke-width: 10px;
     fill: white;
 }
 

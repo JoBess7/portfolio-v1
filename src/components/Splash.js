@@ -23,7 +23,7 @@ import "../styles/_queries.css";
 import "../styles/foot.css";
 
 import { THEME_TOGGLE_SPEED } from "../assets/constants";
-import { useState } from "react/cjs/react.development";
+import { useLayoutEffect, useState } from "react/cjs/react.development";
 
 const Page = styled.div`
     display: flex;
@@ -43,7 +43,7 @@ export default function Splash(props) {
         if(theme === 'light') props.setTheme('dark');
         else props.setTheme('light');
     }
-    
+
     useEffect(() => {
         setDatabaseController(new DatabaseController());
     }, []);

@@ -32,4 +32,6 @@ body::-webkit-scrollbar-thumb {
     background-color: #1b71c2;
     border-radius: 10px;
   }
+
+html, body {overflow-x: hidden;}
   
