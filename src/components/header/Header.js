@@ -6,7 +6,6 @@ import Heart from "./Heart";
 import styled from "styled-components";
 import { HEADER_WIDTH, DELTA_HEADER, THEME_TOGGLE_SPEED } from "../../assets/constants";
 import { themeTogglerProperties } from "../../assets/themeTogglerProperties";
-import { useInView } from "react-intersection-observer";
 
 const HeaderFlex = styled.div`
     transition: all ${THEME_TOGGLE_SPEED}s;
@@ -18,10 +17,7 @@ const HeaderContainer = styled.div`
 
 function Header(props) {
 
-    const { ref, inView } = useInView({
-        threshold: 0,
-        triggerOnce: true,
-    }) 
+    const {theme} = props;
 
     const [canAnimate, setCanAnimate] = useState(true);
     const [isDarkMode, setIsDarkMode] = useState(true);
@@ -41,12 +37,12 @@ function Header(props) {
         setBurgerOpened(!burgerOpened);
     }
 
-    //setInterval(() => {
-    //    if(didScroll) {
-    //        didScroll = false;
-    //        onScrollEvent();
-    //    }
-    //}, 250);
+    setInterval(() => {
+        if(didScroll) {
+            didScroll = false;
+            onScrollEvent();
+        }
+    }, 250);
 
     var expanded = false;
     var ST;
@@ -68,13 +64,13 @@ function Header(props) {
     return (
         <HeaderFlex className={`header ${headerClasses}`}>
             <HeaderContainer className="header-container">
-                <div ref={ref} className={inView ? "burger-flex header-show-comp" : "burger-flex header-hidden-comp"}>
+                <div className={props.inView ? "burger-flex header-show-comp" : "burger-flex header-hidden-comp"}>
                     <Burger sendBurgerState={sendBurgerState} theme={props.theme}/>
                     <Linker burgerOpened={burgerOpened}/>
                 </div>
 
-                <div ref={ref} className={inView ? "heart-flex header-show-comp" : "heart-flex header-hidden-comp"}>
-                    <Heart databaseController={props.databaseController}/>
+                <div className={props.inView ? "heart-flex header-show-comp" : "heart-flex header-hidden-comp"}>
+                    <Heart theme={theme} />
                     <DarkModeSwitch
                         animationProperties={themeTogglerProperties}
                         className={"darkModeToggler"}

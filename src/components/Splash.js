@@ -1,11 +1,9 @@
-import React, { useEffect } from "react";
-import Header from "./header/Header";
 import styled from "styled-components";
+import Header from "./header/Header";
 import Main from "./main/Main";
 import Second from "./second/Second";
 import Foot from "./foot/Foot";
-import DatabaseController from "../database/DatabaseController";
-// import AnimatedCursor from "react-animated-cursor";
+import { useInView } from "react-intersection-observer";
 
 import "../styles/appStyles.css";
 
@@ -23,7 +21,7 @@ import "../styles/_queries.css";
 import "../styles/foot.css";
 
 import { THEME_TOGGLE_SPEED } from "../assets/constants";
-import { useLayoutEffect, useState } from "react/cjs/react.development";
+import { useState } from "react/cjs/react.development";
 
 const Page = styled.div`
     display: flex;
@@ -36,33 +34,47 @@ const Page = styled.div`
 
 export default function Splash(props) {
 
-    const [databaseController, setDatabaseController] = useState(null);
     const {theme} = props;
+    
+    const [x, setX] = useState(false);
+
+    const { ref, inView } = useInView({
+        threshold: 0,
+        triggerOnce: true,
+    }) 
 
     function changeTheme() {
         if(theme === 'light') props.setTheme('dark');
         else props.setTheme('light');
+        setX(!x);
     }
-
-    useEffect(() => {
-        setDatabaseController(new DatabaseController());
-    }, []);
 
     return (
         <Page>
-            <Header 
+
+            <div ref={ref} className="initial-trigger"></div>
+
+            <Header
+                inView={inView}
+                theme={theme}
                 changeTheme={changeTheme}
-                databaseController={databaseController}
             />
-            <Main/>
+
+            <Main
+                inView={inView} 
+            />
+            
             <Second/>
+
             <Foot
+
                 // Key forces a rerender of child, in this case Foot.
                 key={props.theme}
                 theme={theme}
                 initialIconColor={theme === "dark" ? "grey" : "grey"}
                 animatedIconColor={theme === "dark" ? "#1b71c2" : "#1b71c2"}
             />
+
         </Page>
     );
 }

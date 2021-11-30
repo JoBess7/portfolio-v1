@@ -3,7 +3,7 @@ import {ThemeProvider} from "styled-components";
 import Splash from './components/Splash';
 
 const LightTheme = {
-  pageBackground: '#FFFFFF',
+  pageBackground: "rgba(246, 245, 240, 0.8)",
   headerLink: "#282c36",
   headerBackground: "",
   tagLineColor: 'black',
@@ -11,7 +11,7 @@ const LightTheme = {
   projectBackground: "#1E262F",
   projectDescription: "#282c36",
   blue: "#1b71c2",
-  lightBlue: "#bbcde5",
+  lightBlue: "rgba(18, 27, 49, 0.8)",
   gray: "#dfdfdf"
 }
 

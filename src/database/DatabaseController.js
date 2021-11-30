@@ -1,7 +1,6 @@
 export default class DatabaseController {
+    
+    incrementLikeCount() {
 
-
-    test() {
-        console.log("Sansas");
     }
 }
