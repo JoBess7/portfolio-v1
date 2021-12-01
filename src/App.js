@@ -4,7 +4,7 @@ import Splash from './components/Splash';
 
 const LightTheme = {
   pageBackground: "rgba(246, 245, 240, 0.8)",
-  headerLink: "#282c36",
+  headerLink: "#EEEFF0",
   headerBackground: "",
   tagLineColor: 'black',
   burger: "#000",

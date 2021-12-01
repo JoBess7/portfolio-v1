@@ -225,7 +225,7 @@
 }
 
 .link {
-    font-family: "Wotfard-SemiBold";
+    font-family: "Wotfard-Regular";
     cursor: pointer;
 }
 
@@ -293,7 +293,6 @@
 .heart-stroke {
     transition: all 0.5s;
 }
-
 
 .darky {
     fill: white;
