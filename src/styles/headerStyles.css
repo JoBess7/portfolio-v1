@@ -7,6 +7,8 @@
     align-items: center;
     justify-content: center;
     z-index: 999;
+    filter: blur(.6);
+    opacity: .95;
 }
 
 .initial-trigger {
@@ -293,11 +295,11 @@
 }
 
 
-.lighty {
+.darky {
     fill: white;
 }
 
-.darky {
+.lighty {
     fill: black;
 }
 
