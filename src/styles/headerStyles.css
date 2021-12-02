@@ -212,7 +212,7 @@
 }
 
 .link {
-    font-family: "Wotfard-SemiBold";
+    font-family: "Wotfard-Regular";
     cursor: pointer;
 }
 
@@ -236,7 +236,66 @@
 }
 
 
-.header-hidden-comp {
+/* ------------------------ Heart -------------------------- */
+
+#small {
+    transform-origin: center;
+    transition: all 0.5s ease-out;
+}
+
+.not-activated {
+    transform: scale(.05);
+}
+
+.heart-activate {
+    animation: heart-activate .2s ease-in-out forwards 1;
+}
+
+@keyframes heart-activate {
+    0% {transform: scale(.05); }
+    85% {transform: scale(12); }
+    100% {transform: scale(9.5); }
+}
+
+.heart-already-activated {
+    animation: heart-already-active .3s ease-out forwards 1;
+}
+
+@keyframes heart-already-active {
+    0% {transform: scale(9.5);}
+    50% {transform: scale(11.5);}
+    100% {transform: scale(9.5);}
+}
+
+.heart-been-activated {
+    animation: heart-been-active .3s ease-out forwards 1;
+}
+
+@keyframes heart-been-active {
+    0% {transform: scale(9.5);}
+    50% {transform: scale(11.5);}
+    100% {transform: scale(9.5);}
+}
+
+.heart-stroke {
+    transition: all 0.5s;
+}
+
+.darky {
+    fill: white;
+}
+
+.lighty {
+    fill: black;
+}
+
+.activated-stroke {
+    fill: rgb(255, 23, 23);
+}
+
+.like-indicator {
+    position: absolute;
+    color: white;
     opacity: 0;
 }
 

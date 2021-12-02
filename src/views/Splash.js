@@ -22,7 +22,7 @@ import "../styles/_queries.css";
 import "../styles/foot.css";
 
 import { THEME_TOGGLE_SPEED } from "../assets/constants";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 
 const Page = styled.div`
     display: flex;
@@ -36,18 +36,15 @@ const Page = styled.div`
 export default function Splash(props) {
 
     const {theme} = props;
-    
-    const [x, setX] = useState(false);
 
     const { ref, inView } = useInView({
         threshold: 0,
         triggerOnce: true,
-    }) 
+    });
 
     function changeTheme() {
         if(theme === 'light') props.setTheme('dark');
         else props.setTheme('light');
-        setX(!x);
     }
 
     return (
