@@ -2,7 +2,7 @@ import { DarkModeSwitch } from "react-toggle-dark-mode";
 import React, {useState} from "react";
 import Burger from "./Burger";
 import Linker from "./Linker";
-import Heart from "./Heart";
+import Heart from "../../components/Heart";
 import styled from "styled-components";
 import { HEADER_WIDTH, DELTA_HEADER, THEME_TOGGLE_SPEED } from "../../assets/constants";
 import { themeTogglerProperties } from "../../assets/themeTogglerProperties";
@@ -37,12 +37,12 @@ function Header(props) {
         setBurgerOpened(!burgerOpened);
     }
 
-    setInterval(() => {
-        if(didScroll) {
-            didScroll = false;
-            onScrollEvent();
-        }
-    }, 250);
+    //setInterval(() => {
+    //    if(didScroll) {
+    //        didScroll = false;
+    //        onScrollEvent();
+    //    }
+    //}, 250);
 
     var expanded = false;
     var ST;

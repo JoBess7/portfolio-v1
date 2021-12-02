@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import {ThemeProvider} from "styled-components";
-import Splash from './components/Splash';
+import Splash from './views/Splash';
 
 const LightTheme = {
   pageBackground: "rgba(246, 245, 240, 0.8)",

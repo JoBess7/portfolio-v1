@@ -5,6 +5,7 @@ import Second from "./second/Second";
 import Foot from "./foot/Foot";
 import { useInView } from "react-intersection-observer";
 
+import "../styles/reusables.css"
 import "../styles/appStyles.css";
 
 /* Header styles */

@@ -1,6 +1,6 @@
 import { THEME_TOGGLE_SPEED } from "../../assets/constants";
 import styled from "styled-components";
-import Button from "./Button";
+import Button from "../../components/Button";
 
 const NameIs = styled.div`
     transition: all ${THEME_TOGGLE_SPEED}s;
