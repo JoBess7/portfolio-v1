@@ -1,6 +1,6 @@
 import { THEME_TOGGLE_SPEED } from "../../assets/constants";
 import styled from "styled-components";
-import Button from "../../components/Button";
+import { useInView } from "react-intersection-observer";
 
 const Name = styled.div`
     transition: all ${THEME_TOGGLE_SPEED}s;
@@ -27,15 +27,19 @@ const Arrow = styled.div`
 
 export default function Main(props) {
 
+    const [ refScroller, inViewScroller ] = useInView({
+        threshold: 1,
+    });
+
     return(
         <div className="main">
             <div className="keeper"></div>
-            <div className={props.inView ? "website-width main-flex main-up" : "website-width main-flex main-down"}>
+            <div ref={refScroller} className={props.inView ? "website-width main-flex main-up" : "website-width main-flex main-down"}>
                 <Name className="name">Jonathan Bessette</Name>
                 <Separator></Separator>
                 <PersonalDesc className="main-desc">computer science student</PersonalDesc>
             </div>
-            <div className={props.scrollerVisibility ? "arrow-scroll visible-scroller" : "arrow-scroll invisible-scroller"}>
+            <div className={inViewScroller ? "arrow-scroll visible-scroller" : "arrow-scroll invisible-scroller"}>
                 <Arrow className="square square-top"></Arrow>
                 <Arrow className="square square-mid"></Arrow>
                 <Arrow className="square square-bottom"></Arrow>

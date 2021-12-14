@@ -35,6 +35,7 @@
     font-family: "Wotfard-Regular";
     font-size: 70px;
     letter-spacing: 11px;
+    text-align: center;
 }
 
 .main-desc {
@@ -77,6 +78,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    transition: all 0.5s;
 }
 
 .square {
@@ -87,28 +89,15 @@
     border-radius: 1px;
 }
 
-.square-top {
-    animation: 2s arrow-opacity 0s ease-in-out infinite;
-}
-
-.square-mid {
-    top: 12px;
-    animation: 2s arrow-opacity .33s ease-in-out infinite;
-}
-
-.square-bottom {
-    top: 24px;
-    animation: 2s arrow-opacity .66s ease-in-out infinite;
-}
+.square-top {animation: 2s arrow-opacity 0s ease-in-out infinite;}
+.square-mid {top: 12px; animation: 2s arrow-opacity .33s ease-in-out infinite;}
+.square-bottom {top: 24px; animation: 2s arrow-opacity .66s ease-in-out infinite;}
 
 @keyframes arrow-opacity {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1
-    }
-    100% {
-        opacity: 0;
-    }
+    0% {opacity: 0;}
+    50% {opacity: 1}
+    100% {opacity: 0;}
 }
+
+.visible-scroller {opacity: 1;}
+.invisible-scroller {opacity: 0;}

@@ -302,3 +302,7 @@
 .header-show-comp {
     opacity: 1;
 }
+
+.header-hidden-comp {
+    opacity: 0;
+}

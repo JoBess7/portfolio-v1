@@ -1,6 +1,6 @@
 import SectionTitle from "../../components/SectionTitle";
 
-export default function Second() {
+export default function Second(props) {
 
     return  (
         <div className="about">
