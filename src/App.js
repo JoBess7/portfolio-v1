@@ -3,8 +3,9 @@ import {ThemeProvider} from "styled-components";
 import Splash from './views/Splash';
 
 const LightTheme = {
+  generalized: "black", 
   pageBackground: "rgba(246, 245, 240, 0.8)",
-  headerLink: "#EEEFF0",
+  headerLink: "black",
   headerBackground: "",
   tagLineColor: 'black',
   burger: "#000",
@@ -12,10 +13,11 @@ const LightTheme = {
   projectDescription: "#282c36",
   blue: "#1b71c2",
   lightBlue: "rgba(18, 27, 49, 0.8)",
-  gray: "#dfdfdf"
+  grey: "#595959",
 }
 
 const DarkTheme = {
+  generalized: "white",
   pageBackground: 'rgba(0, 4, 11, 0.97)',
   headerLink: "#E0E3E6",
   headerBackground: "#0E141B",
@@ -25,7 +27,7 @@ const DarkTheme = {
   projectDescription: "#000",
   blue: "#1b71c2",
   lightBlue: "#dee6f0",
-  grey: "#dfdfdf"
+  grey: "#808080"
 }
 
 const themes = {

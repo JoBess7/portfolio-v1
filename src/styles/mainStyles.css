@@ -7,10 +7,9 @@
 }
 
 .main-flex {
-    width: 55%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     transition: all 0.6s;
     transition-delay: .2s;
 }
@@ -32,23 +31,18 @@
     height: 1px;
 }
 
-.my-name-is {
-    font-family: "Wotfard-Regular";
-    padding-bottom: 25px;
-    font-size: 24px;
-}
-
 .name {
     font-family: "Wotfard-SemiBold";
-    padding-bottom: 25px;
-    font-size: 80px;
+    font-size: 70px;
+    letter-spacing: 5px;
 }
 
 .main-desc {
     font-family: "Wotfard-Regular";
     padding-bottom: 50px;
-    font-size: 22px;
-    width: 40%;
+    font-size: 20px;
+    font-style: italic;
+    letter-spacing: 3px;
     text-align: justify;
 }
 
@@ -59,6 +53,10 @@
     width: 100px;
     height: 100px;
     background-color: red;
+}
+
+.button-flex {
+    display: flex;
 }
 
 .textDown {

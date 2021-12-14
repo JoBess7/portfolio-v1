@@ -33,7 +33,7 @@ and (min-height: 2000px) {
 
 @media screen 
 and (max-width: 1400px) {
-    .main-flex {width: 70%;}
+    .website-width {width: 70%;}
     .main-desc {width: 55%;}
 }
 

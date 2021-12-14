@@ -33,5 +33,9 @@ body::-webkit-scrollbar-thumb {
     border-radius: 10px;
   }
 
+.website-width {
+    width: 55%;
+}
+
 html, body {overflow-x: hidden;}
   

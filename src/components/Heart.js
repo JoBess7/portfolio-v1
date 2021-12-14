@@ -1,6 +1,12 @@
 import { useEffect, useRef } from "react";
 import { useReducer, useState } from "react";
+import { THEME_TOGGLE_SPEED } from "../assets/constants";
+import styled from "styled-components";
 
+const LikeIndicator = styled.div`
+    transition: all ${THEME_TOGGLE_SPEED}s;
+    color: ${props => props.theme.generalized};
+`
 
 const initialState = {
     activated: false,
@@ -38,8 +44,8 @@ export default function Heart(props) {
     const [theme, setTheme] = useState(props.theme);
     const [clickTimes, setClickTimes] = useState(0);
     const [state, dispatch] = useReducer(reducer, initialState);
-    const [likeValues, setLikeValues] = useState({});
-
+    const [likeValues, setLikeValues] = useState({})
+    
     useEffect(() => {
         setLikeValues({
             likeRotateValue: Math.random() * 13,
@@ -54,10 +60,10 @@ export default function Heart(props) {
 
     return(
         <div className={"heart-flex"} style={{position: "relative"}}>
-            <div style={{top: `${likeValues.likeYPosition}px`, left: `${likeValues.likeXPosition}px`, transform: `rotate(${likeValues.likeRotateValue}deg)`}}
+            <LikeIndicator style={{top: `${likeValues.likeYPosition}px`, left: `${likeValues.likeXPosition}px`, transform: `rotate(${likeValues.likeRotateValue}deg)`}}
                 className={clickTimes === 0 ? "like-indicator" : "like-indicator like-indicator-show"}>
                 +1
-            </div>
+            </LikeIndicator>
 
             <svg 
                 onClick={() => {
