@@ -12,11 +12,12 @@ const LightTheme = {
   projectBackground: "#1E262F",
   projectDescription: "#282c36",
   blue: "#1b71c2",
-  lightBlue: "rgba(18, 27, 49, 0.8)",
+  lightBlue: "rgba(18, 27, 49, 0.95)",
   grey: "#595959",
   separator: "black",
   description: "black",
-  textShadow: "#C9D1DA"
+  textShadow: "#C9D1DA",
+  shadowDimensions: "4px 4px"
 }
 
 const DarkTheme = {
@@ -33,7 +34,8 @@ const DarkTheme = {
   grey: "#808080",
   separator: "#E1E1E1",
   description: "#E6E6E6",
-  textShadow: "#7B9DBF"
+  textShadow: "#7B9DBF",
+  shadowDimensions: "2px 3px"
 }
 
 const themes = {

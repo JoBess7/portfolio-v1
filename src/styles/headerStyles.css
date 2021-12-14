@@ -37,23 +37,6 @@
     flex-direction: row;
 }
 
-
-.headerReduce {
-    animation: headerReduce .3s ease-out forwards 1;
-}
-@keyframes headerReduce {
-    from {height: 85px;}
-    to {height: 60px;}
-}
-.headerExpand {
-    animation: headerExpand .3s ease-out forwards 1;
-}
-@keyframes headerExpand {
-    from {height: 60px;}
-    to {height: 85px;}
-}
-
-
 .burger {
     width: 35px;
     height: 22px;

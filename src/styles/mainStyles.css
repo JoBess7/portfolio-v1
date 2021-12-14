@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .main-flex {
@@ -44,6 +45,7 @@
     letter-spacing: 3px;
     text-align: justify;
     font-variant: small-caps;
+    text-align: center;
 }
 
 .about-text {

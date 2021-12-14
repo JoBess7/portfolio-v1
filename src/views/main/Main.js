@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 const Name = styled.div`
     transition: all ${THEME_TOGGLE_SPEED}s;
     color: ${props => props.theme.lightBlue};
-    text-shadow: 4px 4px ${props => props.theme.textShadow};
+    text-shadow: ${props => props.theme.shadowDimensions} ${props => props.theme.textShadow};
 `
 const PersonalDesc = styled.div`
     transition: all ${THEME_TOGGLE_SPEED}s;
