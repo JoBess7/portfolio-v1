@@ -20,7 +20,7 @@ function Header(props) {
     const {theme} = props;
 
     const [canAnimate, setCanAnimate] = useState(true);
-    const [isDarkMode, setIsDarkMode] = useState(true);
+    const [isDarkMode, setIsDarkMode] = useState(false);
     const [burgerOpened, setBurgerOpened] = useState(false);
     const [headerClasses, setHeaderClasses] = useState("headerExpand");
     var didScroll = false;

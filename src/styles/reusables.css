@@ -29,6 +29,7 @@
     font-size: 18px;
     color: white;
     letter-spacing: 2px;
+    font-variant: small-caps;
     font-family: "Wotfard-Regular";
     z-index: 10;
 }

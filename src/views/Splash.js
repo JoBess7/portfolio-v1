@@ -36,10 +36,17 @@ const Page = styled.div`
 export default function Splash(props) {
 
     const {theme} = props;
+    const [secondVisible, setSecondVisible] = useState(false);
 
     const { ref, inView } = useInView({
         threshold: 0,
         triggerOnce: true,
+    });
+
+    const { refScroller, inViewScroller } = useInView({
+        threshold: 0,
+        trackVisibility: true,
+        triggerOnce: false
     });
 
     function changeTheme() {
@@ -60,9 +67,11 @@ export default function Splash(props) {
 
             <Main
                 inView={inView} 
+                scrollerVisibility={!inViewScroller}
             />
             
-            <Second/>
+            <Second
+                ref={refScroller}/>
 
             <Foot
 

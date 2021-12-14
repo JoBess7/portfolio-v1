@@ -34,7 +34,6 @@ and (min-height: 2000px) {
 @media screen 
 and (max-width: 1400px) {
     .website-width {width: 70%;}
-    .main-desc {width: 55%;}
 }
 
 @media screen 
@@ -52,15 +51,3 @@ and (max-width: 500px) {
     .main-desc {font-size: 18px;}
 }
 
-
-
-/* ---------------- CONTAINER3 --------------------- */
-@media screen
-and (max-width: 1300px) {
-    .works-container {display: flex; flex-direction: column;}
-}
-@media screen
-and (max-width: 600px) {
-    .square {width: 280px;}
-    .project-img {display: none;}
-}

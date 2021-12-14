@@ -14,6 +14,9 @@ const LightTheme = {
   blue: "#1b71c2",
   lightBlue: "rgba(18, 27, 49, 0.8)",
   grey: "#595959",
+  separator: "black",
+  description: "black",
+  textShadow: "#C9D1DA"
 }
 
 const DarkTheme = {
@@ -27,7 +30,10 @@ const DarkTheme = {
   projectDescription: "#000",
   blue: "#1b71c2",
   lightBlue: "#dee6f0",
-  grey: "#808080"
+  grey: "#808080",
+  separator: "#E1E1E1",
+  description: "#E6E6E6",
+  textShadow: "#7B9DBF"
 }
 
 const themes = {
@@ -37,7 +43,7 @@ const themes = {
 
 function App() {
 
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('light');
 
   return (
     <ThemeProvider theme={themes[theme]}>
