@@ -1,6 +1,6 @@
 // Hardcoded
 import igemLogo from './images/igem_logo.svg';
-import pictureOfMe from './images/pictureOfMe.png';
+import pictureOfMe from './images/pictureOfMe.jpeg';
 
 export const HEADER_WIDTH = 95;
 export const DELTA_HEADER = 150;

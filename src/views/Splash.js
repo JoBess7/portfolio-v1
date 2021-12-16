@@ -22,7 +22,6 @@ import "../styles/_queries.css";
 import "../styles/foot.css";
 
 import { THEME_TOGGLE_SPEED } from "../assets/constants";
-import { useState } from "react";
 
 const Page = styled.div`
     display: flex;
