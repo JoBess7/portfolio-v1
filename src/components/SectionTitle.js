@@ -12,7 +12,8 @@ const SectionText = styled.div`
 export default function SectionTitle({title}) {
     return(
         <div className="section-title-flex">
-            <SectionText className="title-title">{title}
+            <SectionText className="title-title">
+                {title}
                 <Scratch/>
             </SectionText>
         </div>

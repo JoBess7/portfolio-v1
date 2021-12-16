@@ -34,6 +34,6 @@ export const PROJECTS = [
 
 export const ABOUT = 
 {
-    description: "salut cest moi longue description laokdsa dmsa sdas dasdk sakd nkasmd klmasldk kamdm aklsmd asdkmaskdm samd lam dlamsdlksma dask mdaklsm dlasd ",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis vitae et leo duis ut. Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. Laoreet non curabitur gravida arcu ac. Vulputate dignissim suspendisse in est ante in. Ultrices dui sapien eget mi proin sed libero enim sed. Etiam non quam lacus suspendisse faucibus interdum. Mauris a diam maecenas sed enim ut sem. Tristique senectus et netus et. Maecenas ultricies mi eget mauris pharetra. Ac turpis egestas maecenas pharetra convallis posuere morbi. Erat imperdiet sed euismod nisi.",
     image: pictureOfMe      
 }

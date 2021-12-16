@@ -1,8 +1,16 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 export default function LazyLoader(props) {
   const ref = useRef(null);
   const io = useRef(null);
+
+  const [hoverClasses, setHoverClasses] = useState("");
+  const [observable, setObservable] = useState(false);
+  useEffect(() => {
+    if(props.observable) {
+      setObservable(true);
+    }
+  }, [])
 
   useEffect(() => {
     if (ref.current) {
@@ -29,5 +37,20 @@ export default function LazyLoader(props) {
     };
   }, [ref]);
 
-  return <img ref={ref} className={props.className} alt="" />;
+  return <img 
+          ref={ref} 
+          className={props.className + ' ' + hoverClasses}
+          alt=""
+
+          onMouseEnter={() => {
+            if(observable) {
+              setHoverClasses("to-color");
+            }
+          }}
+          onMouseLeave={() => {
+            if(observable) {
+              setHoverClasses("");
+            }
+          }}
+          />;
 }

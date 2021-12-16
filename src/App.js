@@ -7,15 +7,12 @@ const LightTheme = {
   pageBackground: "rgba(246, 245, 240, 0.8)",
   headerLink: "black",
   headerBackground: "",
-  tagLineColor: 'black',
   burger: "#000",
-  projectBackground: "#1E262F",
-  projectDescription: "#282c36",
   blue: "#1b71c2",
   lightBlue: "rgba(18, 27, 49, 0.95)",
   grey: "#595959",
   separator: "black",
-  description: "black",
+  description: "rgba(18, 27, 49, 0.95)",
   textShadow: "#C9D1DA",
   shadowDimensions: "4px 4px"
 }
@@ -25,15 +22,12 @@ const DarkTheme = {
   pageBackground: 'rgba(0, 4, 11, 0.97)',
   headerLink: "#E0E3E6",
   headerBackground: "#0E141B",
-  tagLineColor: 'lavender',
   burger: "#EEEFF0",
-  projectBackground: "white",
-  projectDescription: "#000",
   blue: "#1b71c2",
   lightBlue: "#dee6f0",
   grey: "#808080",
   separator: "#E1E1E1",
-  description: "#E6E6E6",
+  description: "#d2d2d2",
   textShadow: "#7B9DBF",
   shadowDimensions: "2px 3px"
 }
