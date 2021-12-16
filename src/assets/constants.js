@@ -1,6 +1,6 @@
-// Hardcoded constants used throughout the app.
+// Hardcoded
 import igemLogo from './images/igem_logo.svg';
-
+import pictureOfMe from './images/pictureOfMe.png';
 
 export const HEADER_WIDTH = 95;
 export const DELTA_HEADER = 150;
@@ -31,3 +31,9 @@ export const PROJECTS = [
         github: ""
     }
 ]
+
+export const ABOUT = 
+{
+    description: "salut cest moi longue description laokdsa dmsa sdas dasdk sakd nkasmd klmasldk kamdm aklsmd asdkmaskdm samd lam dlamsdlksma dask mdaklsm dlasd ",
+    image: pictureOfMe      
+}

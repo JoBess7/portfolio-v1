@@ -1,12 +1,29 @@
 .about {
-    height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 200px;
 }
 
 .about-flex {
     display: flex;
     flex-direction: column;
+}
+
+.about-hori-flex {
+    display: flex;
+    position: relative;
+}
+
+.about-description {
+    width: 60%;
+    text-align: justify;
+} 
+
+.about-img {
+    border-radius: 20px;
+    height: auto;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
 }
