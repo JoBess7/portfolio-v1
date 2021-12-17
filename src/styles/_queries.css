@@ -1,3 +1,10 @@
+@media screen 
+and (min-width: 2000px) {
+    .website-width {width: 1300px;}
+}
+
+
+
 /* ---------------- HEADER --------------------- */
 @media screen 
 and (max-width: 600px) {
@@ -32,11 +39,6 @@ and (min-height: 2000px) {
 }
 
 @media screen 
-and (max-width: 1400px) {
-    .website-width {width: 70%;}
-}
-
-@media screen 
 and (max-width: 1200px) {
     .name {font-size: 45px;}
     .main-desc {font-size: 18px;}
@@ -49,3 +51,11 @@ and (max-width: 500px) {
     .main-desc {font-size: 18px;}
 }
 
+/* ---------------- CONTAINER2 --------------------- */
+@media screen 
+and (max-width: 800px) {
+    .about-img {width: 100%;}  
+    .about-description {letter-spacing: -1px; width: 100%; padding: 0 0 30px 0;}  
+    .about-description {font-size: 20px;}
+    .about-hori-flex {flex-direction: column;}
+}

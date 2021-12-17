@@ -27,7 +27,7 @@ function Linker(props) {
     return (
         <div className="linker-flex">
             <Link 
-                onClick={() => scrollElementIntoView(".about-section")} 
+                onClick={() => scrollElementIntoView(".about")} 
                 style={firstLinkStyle} 
                 className={`link ${burgerOpened ? "linkAppear" : "linkDisappear"}`}>
                     About

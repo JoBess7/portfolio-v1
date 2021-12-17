@@ -12,13 +12,21 @@
 }
 
 .about-hori-flex {
-    display: flex;
     position: relative;
+    transform: translateY(0);
+    transition: all .5s ease-out;
+    opacity: 1;
+    display: flex;
+}
+
+.about-hidden {
+    opacity: 0;
+    transform: translateY(100px);
 }
 
 .about-description {
     padding-right: 50px;
-    width: 60%;
+    width: 100%;
     text-align: justify;
     font-family: "Wotfard-Regular";
     font-size: 28px;
@@ -29,7 +37,6 @@
     width: 40%;
     height: auto;
     border-radius: 4px;
-    height: auto;
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
     transition: all 0.7s;

@@ -4,7 +4,7 @@ import Splash from './views/Splash';
 
 const LightTheme = {
   generalized: "black", 
-  pageBackground: "rgba(246, 245, 240, 0.8)",
+  pageBackground: "rgba(246, 245, 240, 1)",
   headerLink: "black",
   headerBackground: "",
   burger: "#000",
@@ -19,7 +19,7 @@ const LightTheme = {
 
 const DarkTheme = {
   generalized: "white",
-  pageBackground: 'rgba(0, 4, 11, 0.97)',
+  pageBackground: 'rgba(0, 4, 11, 1)',
   headerLink: "#E0E3E6",
   headerBackground: "#0E141B",
   burger: "#EEEFF0",
