@@ -1,6 +1,7 @@
 import {FiGithub} from "react-icons/fi";
 import {FiLinkedin} from "react-icons/fi";
 import { useState } from "react";
+
 export default function Foot(props) {
 
     const { initialIconColor, animatedIconColor} = props;
@@ -16,30 +17,19 @@ export default function Foot(props) {
             <div className="foot-flex">
                 <div className="foot-icon-flex" >
                     <div className="icon-container"
-                        onMouseEnter={() => {
-                            setGithubClasses("icon icon-anim-up");
-                            setGithubIconColor(animatedIconColor);
-                        }}
-                        onMouseOut={() => {
-                            setGithubClasses("icon icon-anim-down")
-                            setGithubIconColor(initialIconColor);
-                        }}>
+                        onMouseEnter={() => {setGithubClasses("icon icon-anim-up"); setGithubIconColor(animatedIconColor);}}
+                        onMouseOut={() => {setGithubClasses("icon icon-anim-down"); setGithubIconColor(initialIconColor);}}>
                         <FiGithub 
-                            className={githubClasses}
-                            size={23}
-                            stroke={githubIconColor}
-                            strokeWidth={1.7}/>
+                        className={githubClasses}
+                        size={23}
+                        stroke={githubIconColor}
+                        strokeWidth={1.7}/>
                     </div>
 
                     <div className="icon-container"
-                        onMouseEnter={() => {
-                            setLIIClasses("icon icon-anim-up");
-                            setLIIconColor(animatedIconColor);
-                        }}
-                        onMouseOut={() => {
-                            setLIIClasses("icon icon-anim-down")
-                            setLIIconColor(initialIconColor);
-                        }}>
+                        onMouseEnter={() => {setLIIClasses("icon icon-anim-up"); setLIIconColor(animatedIconColor);}}
+                        onMouseOut={() => {setLIIClasses("icon icon-anim-down"); setLIIconColor(initialIconColor);}}>
+
                         <FiLinkedin 
                             className={LIIClasses}
                             size={23}

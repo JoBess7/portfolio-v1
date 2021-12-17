@@ -66,8 +66,8 @@ export default function Splash(props) {
                 // Key forces a rerender of child, in this case Foot.
                 key={props.theme}
                 theme={theme}
-                initialIconColor={theme === "dark" ? "grey" : "grey"}
-                animatedIconColor={theme === "dark" ? "#1b71c2" : "#1b71c2"}
+                initialIconColor={"grey"}
+                animatedIconColor={"rgb(41, 116, 230)"}
             />
 
         </Page>

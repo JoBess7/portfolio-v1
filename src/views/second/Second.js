@@ -1,9 +1,9 @@
 import SectionTitle from "../../components/SectionTitle";
 import { ABOUT } from "../../assets/constants";
-import LazyLoader from "../../components/LazyLoader";
 import styled from "styled-components";
 import { THEME_TOGGLE_SPEED } from "../../assets/constants";
 import { useInView } from "react-intersection-observer";
+import { useState } from "react";
 
 const AboutDescription = styled.div`
     transition: all ${THEME_TOGGLE_SPEED}s;
@@ -11,6 +11,8 @@ const AboutDescription = styled.div`
 `
 
 export default function Second(props) {
+
+    const [hoverClasses, setHoverClasses] = useState("");
 
     const [ scratcherRef, scratcherInView ] = useInView({
         threshold: 0,
@@ -22,16 +24,17 @@ export default function Second(props) {
             <div className="about-flex website-width">
                 <SectionTitle inView={scratcherInView} title="About"/>      
                 <div ref={scratcherRef} className={`about-hori-flex ${scratcherInView ? "" : "about-hidden"}`}>
+                    <img 
+                        src={ABOUT.image}
+                        className={"about-img" + ' ' + hoverClasses}
+                        alt=""
+                        onMouseEnter={() => {setHoverClasses("to-color");}}
+                        onMouseLeave={() => {setHoverClasses("");}}
+                    />
+
                     <AboutDescription className="about-description">
                         {ABOUT.description}
                     </AboutDescription>
-                    <LazyLoader 
-                        observable={true} 
-                        intersectRatio={-1}
-                        className={"about-img"} 
-                        src={ABOUT.image} 
-                        threshold={[0, 0.5, 1]} 
-                    />
                 </div>
             </div>
         </div>

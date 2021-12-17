@@ -153,20 +153,26 @@
 .scratcher {
     z-index: -1;
     height: 30%;
-    width: 100%;
+    width: 99%;
     background-color: rgb(41, 116, 230);
     transform: skewY(-20deg);
 }
 
 .scratcher-cover {
+    transition: 1s all;
     z-index: 10;
     width: 100%;
     height: 100%;
     position: absolute;
     right: 0;
-    animation: 1s scratcher-expand ease-in-out infinite;
 }
 
 .scratcher-shown {
-    width: 0%;
+    animation: expand-scratcher .8s ease 1 forwards;
+    animation-delay: 100ms;
+}
+
+@keyframes expand-scratcher {
+    from {width: 99%;}
+    to {width: 0%;}
 }

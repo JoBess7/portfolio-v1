@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { THEME_TOGGLE_SPEED } from "../assets/constants";
 
 const ScratchCover = styled.div`
-    transition: all ${THEME_TOGGLE_SPEED}s;
+    transition: background-color ${THEME_TOGGLE_SPEED}s;
     background-color: ${props => props.theme.pageBackground};
 `
 
