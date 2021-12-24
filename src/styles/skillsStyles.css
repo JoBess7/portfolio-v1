@@ -1,0 +1,95 @@
+.skills {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 200px 0;
+}
+
+.skills-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-horizontal {
+    display: flex;
+}
+
+.skills-selection {
+    display: flex;
+    flex-direction: column;
+}
+
+.selectable-title {
+    text-align: justify;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: -3px;
+    font-family: "Wotfard-Regular";
+}
+
+.highlight {
+    position: absolute;
+    width: 100%;
+    bottom: 4px;
+    height: 3px;
+    background-color: rgba(125, 182, 247, 0.6);
+    transition: height 0.2s ease-out, background-color 0.1s linear;
+}
+
+.hovered {
+    height: 7px;
+}
+
+.clicked-light {
+    height: 17px;
+    background-color: rgba(125, 182, 247, .9);
+}
+
+.clicked-dark {
+    height: 17px;
+    background-color: rgba(125, 182, 247, .5);
+}
+
+.skills-separator {
+    width: 2px;
+    margin: 0 20px 0 20px;
+    background-color: black;
+}
+
+.selection {
+    position: relative;
+    font-size: 24px;
+}
+
+.exp-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
+}
+
+.exp-main {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+}
+
+.experiences {
+    position: relative;
+    width: 100%;
+}
+
+.exp-name {
+    align-self: center;
+    font-family: "Wotfard-Regular";
+    font-size: 19px;
+    padding-left: 7px;
+}
+
+.exp-img-flex {
+    display: flex;
+    width: 120px;
+    justify-content: space-between;
+}

@@ -56,30 +56,19 @@
     100% {transform: scale(9.5); }
 }
 
-.heart-already-activated {
-    animation: heart-already-active .3s ease-out forwards 1;
+.heart-deactivate {
+    animation: heart-deactivate .3s ease-out forwards 1;
 }
 
-@keyframes heart-already-active {
+@keyframes heart-deactivate {
     0% {transform: scale(9.5);}
-    50% {transform: scale(11.5);}
-    100% {transform: scale(9.5);}
-}
-
-.heart-been-activated {
-    animation: heart-been-active .3s ease-out forwards 1;
-}
-
-@keyframes heart-been-active {
-    0% {transform: scale(9.5);}
-    50% {transform: scale(11.5);}
-    100% {transform: scale(9.5);}
+    10% {transform: scale(11.5);}
+    100% {transform: scale(0);}
 }
 
 .heart-stroke {
     transition: all 0.5s;
 }
-
 
 .darky {
     fill: white;
@@ -93,17 +82,19 @@
     fill: rgb(255, 23, 23);
 }
 
+
 .like-indicator {
     position: absolute;
     opacity: 0;
     display: none;
     font-family: "Wotfard-SemiBold";
     cursor: pointer;
+    pointer-events: none;
 }
 
 .like-indicator-show {
     display: unset;
-    animation: like-show 4s ease-out forwards 1;
+    animation: like-show 3s ease-out forwards 1;
 }
 
 @keyframes like-show {
@@ -141,7 +132,7 @@
     overflow: hidden;
     position: absolute;
     right: -20px;
-    top: 0;
+    top: 10px;
     z-index: -10;
     width: 60px;
     height: 50px;
@@ -154,7 +145,7 @@
     z-index: -1;
     height: 30%;
     width: 99%;
-    background-color: rgb(41, 116, 230);
+    background-color: rgb(41, 116, 230, .9);
     transform: skewY(-20deg);
 }
 
@@ -176,3 +167,5 @@
     from {width: 99%;}
     to {width: 0%;}
 }
+
+

@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export default function Foot(props) {
 
-    const { initialIconColor, animatedIconColor} = props;
+    const { initialIconColor, animatedIconColor } = props;
 
     const [githubClasses, setGithubClasses] = useState("icon icon-anim-down");
     const [githubIconColor, setGithubIconColor] = useState(initialIconColor);

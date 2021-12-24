@@ -54,7 +54,9 @@ and (max-width: 500px) {
 /* ---------------- CONTAINER2 --------------------- */
 @media screen 
 and (max-width: 800px) {
-    .about-img {width: 80%; padding: 20px 0 0 0;}  
+    .about-img {position: relative; width: 100%; margin: 20px 0 0 0;}  
     .about-description {letter-spacing: -1px; width: 100%; font-size: 20px;}  
     .about-hori-flex {align-items: center; flex-direction: column-reverse; display: flex;}
 }
+
+/* ---------------- CONTAINER3 --------------------- */

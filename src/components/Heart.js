@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { useReducer, useState } from "react";
 import { THEME_TOGGLE_SPEED } from "../assets/constants";
 import styled from "styled-components";
@@ -22,17 +22,11 @@ function reducer(state, action) {
                 heartClasses: "heart heart-activate",
                 strokeClasses: "heart-stroke activated-stroke"
             }
-        case "already-activated":
+        case "deactivate":
             return {
                 ...state, 
-                heartClasses: "heart heart-already-activated",
-                strokeClasses: "heart-stroke activated-stroke"
-            }
-        case "been-activated":
-            return {
-                ...state, 
-                heartClasses: "heart heart-been-activated",
-                strokeClasses: "heart-stroke activated-stroke"
+                heartClasses: "heart heart-deactivate",
+                strokeClasses: "heart-stroke"
             }
         default:
             break;
@@ -41,11 +35,31 @@ function reducer(state, action) {
 
 export default function Heart(props) {
 
+    const [state, dispatch] = useReducer(reducer, initialState);
+    const [likeValues, setLikeValues] = useState({});
     const [theme, setTheme] = useState(props.theme);
     const [clickTimes, setClickTimes] = useState(0);
-    const [state, dispatch] = useReducer(reducer, initialState);
-    const [likeValues, setLikeValues] = useState({})
+    const [canAnimate, setCanAnimate] = useState(true);
     
+    function dispatcher() {
+        if (clickTimes % 2 === 0 && canAnimate) {
+            dispatch({type: "activate"});
+
+        }
+        else if (canAnimate) {
+            dispatch({type: "deactivate"});
+        }
+    }
+
+    function delayAnimation() {
+        if(canAnimate) {
+            setCanAnimate(false);
+            setTimeout(() => {
+                setCanAnimate(true);
+            }, 3000);
+        }
+    }
+
     useEffect(() => {
         setLikeValues({
             likeRotateValue: Math.random() * 13,
@@ -60,19 +74,18 @@ export default function Heart(props) {
 
     return(
         <div className={"heart-flex"} style={{position: "relative"}}>
-            <LikeIndicator style={{top: `${likeValues.likeYPosition}px`, left: `${likeValues.likeXPosition}px`, transform: `rotate(${likeValues.likeRotateValue}deg)`}}
-                className={clickTimes === 0 ? "like-indicator" : "like-indicator like-indicator-show"}>
-                +1
+            <LikeIndicator 
+                style={{top: `${likeValues.likeYPosition}px`, left: `${likeValues.likeXPosition}px`, transform: `rotate(${likeValues.likeRotateValue}deg)`}}
+                className={clickTimes % 2 === 0 ? "like-indicator" : "like-indicator like-indicator-show"}
+                
+                >
+                {clickTimes % 2 === 0 ? "+" : "-"}1
             </LikeIndicator>
 
             <svg 
                 onClick={() => {
-                    if (clickTimes === 0) {
-                        dispatch({type: "activate"});
-                    }
-                    else if(clickTimes % 2 === 1) dispatch({type: "already-activated"});
-                    else dispatch({type: "been-activated"})
-                    
+                    dispatcher();
+                    delayAnimation();
                     setClickTimes(clickTimes + 1);
                 }}
 

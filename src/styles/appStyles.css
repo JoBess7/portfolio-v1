@@ -14,6 +14,14 @@
     font-weight: normal;
 }
 
+@font-face {
+    font-family: 'Play-Regular';
+    src: local('Play-Regular'),
+        url(../assets/fonts/Play-Regular.ttf)
+        format('truetype');
+    font-weight: normal;
+}
+
 body {
     box-sizing: border-box;
     padding: 0;
@@ -38,4 +46,3 @@ body::-webkit-scrollbar-thumb {
 }
 
 html, body {overflow-x: hidden;}
-  

@@ -10,7 +10,7 @@ const AboutDescription = styled.div`
     color: ${props => props.theme.description};
 `
 
-export default function Second(props) {
+export default function About(props) {
 
     const [hoverClasses, setHoverClasses] = useState("");
 
@@ -26,7 +26,7 @@ export default function Second(props) {
                 <div ref={scratcherRef} className={`about-hori-flex ${scratcherInView ? "" : "about-hidden"}`}>
                     <img 
                         src={ABOUT.image}
-                        className={"about-img" + ' ' + hoverClasses}
+                        className={"about-img " + hoverClasses}
                         alt=""
                         onMouseEnter={() => {setHoverClasses("to-color");}}
                         onMouseLeave={() => {setHoverClasses("");}}

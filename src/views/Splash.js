@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Header from "./header/Header";
 import Main from "./main/Main";
-import Second from "./second/Second";
+import About from './about/About'
 import Foot from "./foot/Foot";
 import { useInView } from "react-intersection-observer";
 
@@ -13,7 +13,8 @@ import "../styles/headerStyles.css";
 
 /* Container styles */
 import "../styles/mainStyles.css";
-import "../styles/secondStyles.css"
+import "../styles/aboutStyles.css";
+import "../styles/skillsStyles.css";
 
 /* Queries */
 import "../styles/_queries.css";
@@ -22,6 +23,7 @@ import "../styles/_queries.css";
 import "../styles/foot.css";
 
 import { THEME_TOGGLE_SPEED } from "../assets/constants";
+import Skills from "./skills/Skills";
 
 const Page = styled.div`
     display: flex;
@@ -60,7 +62,7 @@ export default function Splash(props) {
                 inView={inView}
             />
 
-            <Second/>
+            <About/>
             
             <Foot
                 // Key forces a rerender of child, in this case Foot.
@@ -68,6 +70,10 @@ export default function Splash(props) {
                 theme={theme}
                 initialIconColor={"grey"}
                 animatedIconColor={"rgb(41, 116, 230)"}
+            />
+
+            <Skills
+                theme={theme}
             />
 
         </Page>
