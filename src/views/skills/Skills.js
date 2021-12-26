@@ -26,7 +26,7 @@ export default function Skills({theme}) {
     return  (
         <div className="skills" >
             <div className="skills-flex website-width">
-                <SectionTitle inView={scratcherInView} title="Skills"/>
+                <SectionTitle inView={scratcherInView} title="A Few Skills"/>
                 <div className="skills-horizontal">
                     <div ref={scratcherRef} className="skills-selection">
                         {EXPERIENCES.map((skill, idx) => {
@@ -41,7 +41,7 @@ export default function Skills({theme}) {
                             );
                         })}
                     </div>
-                    <Separator style={{height: `${EXPERIENCES.length * 35}px`}} className="skills-separator"></Separator>
+                    <Separator style={{height: `${EXPERIENCES[selectedTitle][0].length * 50}px`}} className="skills-separator"></Separator>
                     <div className="experiences">
                         {EXPERIENCES.map((skill, idx) => {
                             return (

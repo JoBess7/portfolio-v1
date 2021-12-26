@@ -39,7 +39,7 @@ const themes = {
 
 function App() {
 
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   return (
     <ThemeProvider theme={themes[theme]}>

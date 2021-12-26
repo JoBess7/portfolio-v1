@@ -15,6 +15,7 @@ import "../styles/headerStyles.css";
 import "../styles/mainStyles.css";
 import "../styles/aboutStyles.css";
 import "../styles/skillsStyles.css";
+import "../styles/contactStyles.css"
 
 /* Queries */
 import "../styles/_queries.css";
@@ -24,6 +25,7 @@ import "../styles/foot.css";
 
 import { THEME_TOGGLE_SPEED } from "../assets/constants";
 import Skills from "./skills/Skills";
+import Contact from "./contact/Contact";
 
 const Page = styled.div`
     display: flex;
@@ -76,6 +78,7 @@ export default function Splash(props) {
                 theme={theme}
             />
 
+            <Contact/>
         </Page>
     );
 }

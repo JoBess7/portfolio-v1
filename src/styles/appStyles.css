@@ -46,3 +46,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 html, body {overflow-x: hidden;}
+
+.opacity0 {opacity: 0;}
+.opacity1 {opacity: 1;} 

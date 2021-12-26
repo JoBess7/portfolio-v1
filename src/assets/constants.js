@@ -5,6 +5,10 @@ import cssLogo from './images/css_logo.png';
 import htmlLogo from './images/html_logo.svg';
 import reactLogo from './images/react_logo.png';
 import jqueryLogo from './images/jquery_logo.png';
+import cppLogo from "./images/cpp_logo.png";
+import javaLogo from "./images/java_logo.png";
+import pythonLogo from "./images/python_logo.png";
+import javascriptLogo from "./images/javascript_logo.png";
 
 export const HEADER_WIDTH = 95;
 export const DELTA_HEADER = 150;
@@ -79,12 +83,72 @@ const WEB = [
 
 const PROGRAMMING = [ 
     {
+        name: "C++",
+        level: "80",
+        image: cppLogo,
+        imageWidth: "35px",
+        imageHeight: "38px",
+        color: "",
     },
+    {
+        name: "Java",
+        level: "70",
+        image: javaLogo,
+        imageWidth: "40px",
+        imageHeight: "40px",
+        color: "",
+    },
+    {
+        name: "Python",
+        level: "70",
+        image: pythonLogo,
+        imageWidth: "35px",
+        imageHeight: "35px",
+        color: "",
+    },
+    {
+        name: "Javascript",
+        level: "80",
+        image: javascriptLogo,
+        imageWidth: "38px",
+        imageHeight: "38px",
+        color: "",
+    }
 ];
 
-const OTHER = [ 
+const OTHER = [
     {
+        name: "SQL",
+        level: "72.5",
+        image: null,
+        imageWidth: "38px",
+        imageHeight: "38px",
+        color: "",
     },
+    {
+        name: "Git + Github",
+        level: "85",
+        image: null,
+        imageWidth: "38px",
+        imageHeight: "38px",
+        color: "",
+    },
+    {
+        name: "VS Code",
+        level: "90",
+        image: null,
+        imageWidth: "38px",
+        imageHeight: "38px",
+        color: "",
+    },
+    {
+        name: "Netbeans",
+        level: "75",
+        image: null,
+        imageWidth: "38px",
+        imageHeight: "38px",
+        color: "",
+    }
 ];
 
 export const EXPERIENCES = [
