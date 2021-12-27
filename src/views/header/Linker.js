@@ -34,7 +34,7 @@ function Linker(props) {
             </Link>
 
             <Link
-                onClick={() => scrollElementIntoView(".skills-section")} 
+                onClick={() => scrollElementIntoView(".skills")} 
                 style={secndLinkStyle}
                 className={`link ${burgerOpened ? "linkAppear" : "linkDisappear"}`}>
                     Skills

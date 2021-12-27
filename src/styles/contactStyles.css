@@ -14,7 +14,6 @@
 .character-flex {
     display: flex;
     width: 100%;
-
 }
 
 .character {
@@ -227,5 +226,14 @@
     width : 0;
     border-top : 5vw solid rgb(26, 94, 194);
     border-right : 5vw solid transparent;
+}
+
+.form-flex {width: 100%;}
+
+.form {
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
