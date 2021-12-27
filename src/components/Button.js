@@ -10,12 +10,11 @@ const ButtonText = styled.div`
     color: ${props => props.theme.burger};
 `
 
-export default function Button(props) {
-
-    const {action, text} = props;
+export default function Button({action, text, style}) {
     
     return (
-        <AnimatedButton 
+        <AnimatedButton
+        style={style}
         className="button"
         onClick={action}>
             <ButtonText 

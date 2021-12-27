@@ -11,7 +11,7 @@ const Inputy = styled.input`
     border-bottom: 2px solid ${props => props.theme.lightBlue};
 `;
 
-export default function Input({margintop, what, id}) {
+export default function Input({marginbottom, margintop, what, id}) {
 
     const [value, setValue] = useState(" ");
     const [valid, setValid] = useState(false);
@@ -31,7 +31,7 @@ export default function Input({margintop, what, id}) {
     }
 
     return(
-        <div style={{marginTop: `${margintop * 25}px`}} className="input-div">
+        <div style={{marginTop: `${margintop * 25}px`, marginBottom: `${marginbottom * 25}px` }} className="input-div">
             <Inputy 
                 spellCheck="false" 
                 onChange={(event) => {modifyValue(event)}} 

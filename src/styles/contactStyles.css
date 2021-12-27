@@ -16,9 +16,25 @@
     width: 100%;
 }
 
+.contact-title-flex {
+    display: flex;
+    position: relative;
+}
+
+.character-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+}
+
 .character {
-    width: 28vw;
-    height: 60vw;
+    padding-right: 3vw;
+    width: 15vw;
+    height: 35vw;
+    justify-self: center;
+    align-self: center;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -48,7 +64,7 @@
 .hat-mid1 {background-color: rgb(29, 101, 135);}
 .hat-mid2 {background: rgb(26, 94, 127);}
 .hat-mid3 {
-    width: 150%;
+    width: 135%;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     right: 0;
@@ -198,40 +214,40 @@
     display : inline-block;
     height : 0;
     width : 0;
-    border-right : 2vw solid transparent;
-    border-bottom : 2.7vw solid rgb(29, 101, 135);
-    border-left : 3vw solid transparent;
+    border-right : 1.5vw solid transparent;
+    border-bottom : 1.5vw solid rgb(29, 101, 135);
+    border-left : 1.5vw solid transparent;
 }
 
 .shirt-top-left {
     display : inline-block;
     height : 0;
     width : 0;
-    border-right : 3vw solid transparent;
-    border-bottom : 2.7vw solid rgb(26, 94, 194);
-    border-left : 2vw solid transparent;
+    border-right : 1.5vw solid transparent;
+    border-bottom : 1.5vw solid rgb(26, 94, 194);
+    border-left : 1.5vw solid transparent;
 }
 
 .shirt-bottom-right {
     display : inline-block;
     height : 0;
     width : 0;
-    border-top : 5vw solid rgb(29, 101, 135);
-    border-left : 5vw solid transparent;
+    border-top : 3vw solid rgb(29, 101, 135);
+    border-left : 3vw solid transparent;
 }
 
 .shirt-bottom-left {
     display : inline-block;
     height : 0;
     width : 0;
-    border-top : 5vw solid rgb(26, 94, 194);
-    border-right : 5vw solid transparent;
+    border-top : 3vw solid rgb(26, 94, 194);
+    border-right : 3vw solid transparent;
 }
 
-.form-flex {width: 100%;}
+.form-flex {width: 100%; display: flex;}
 
 .form {
-    width: 100%;
+    width: 50%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;

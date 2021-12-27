@@ -42,7 +42,7 @@ export const PROJECTS = [
 
 export const ABOUT = 
 {
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis vitae et leo duis ut. Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. Laoreet non curabitur gravida arcu ac. Vulputate dignissim suspendisse in est ante in. Ultrices dui sapien eget mi proin sed libero enim sed. Etiam non quam lacus suspendisse faucibus interdum. Mauris a diam maecenas sed enim ut sem. Tristique senectus et netus et. Maecenas ultricies mi eget mauris pharetra. Ac turpis egestas maecenas pharetra convallis posuere morbi. Erat imperdiet sed euismod nisi.",
+    description: "Hi! I'm a second year software engineering student at Laval University in Quebec, Canada. I'm currently maintaining a 4.03 GPA. I love using technologies such as JavaScript, HTML and CSS to create amazing websites. At the moment, I am looking into relational database models and JavaScript frameworks such as React.js. When I'm not coding, you'll most likely find me playing video games or on the court shooting some hoops.",
     image: pictureOfMe      
 }
 

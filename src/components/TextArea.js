@@ -11,7 +11,7 @@ const TextAreay = styled.textarea`
     border-bottom: 2px solid ${props => props.theme.lightBlue};
 `;
 
-export default function TextArea({margintop, what, id}) {
+export default function TextArea({marginbottom, margintop, what, id}) {
 
     const [value, setValue] = useState(" ");
     const [valid, setValid] = useState(false);
@@ -32,7 +32,7 @@ export default function TextArea({margintop, what, id}) {
     }
 
     function focusEvent() {
-        setHeightVal("80px");
+        setHeightVal("50px");
     }
 
     function blurEvent() {
@@ -42,7 +42,7 @@ export default function TextArea({margintop, what, id}) {
     }
 
     return(
-        <div style={{marginTop: `${margintop * 25}px`}} className="input-div">
+        <div style={{marginTop: `${margintop * 25}px`, marginBottom: `${marginbottom * 70}px`}} className="input-div">
             <TextAreay 
                 spellCheck="false" 
                 placeholder=" " 
