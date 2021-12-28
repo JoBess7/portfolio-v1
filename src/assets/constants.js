@@ -9,6 +9,10 @@ import cppLogo from "./images/cpp_logo.png";
 import javaLogo from "./images/java_logo.png";
 import pythonLogo from "./images/python_logo.png";
 import javascriptLogo from "./images/javascript_logo.png";
+import SQLLogo from "./images/database_logo.png";
+import gitLogo from "./images/git_logo.png";
+import VSCodeLogo from "./images/vscode_logo.png";
+import netbeansLogo from "./images/netbeans_logo.png";
 
 export const HEADER_WIDTH = 95;
 export const DELTA_HEADER = 150;
@@ -53,7 +57,7 @@ const WEB = [
         image: cssLogo,
         imageWidth: "38px",
         imageHeight: "38px",
-        color: "",
+        color: "rgb(10, 120, 205)",
     },
     {
         name: "HTML",
@@ -61,7 +65,7 @@ const WEB = [
         image: htmlLogo,
         imageWidth: "38px",
         imageHeight: "38px",
-        color: "",
+        color: "rgb(246, 104, 56)",
     },
     {
         name: "React",
@@ -69,7 +73,7 @@ const WEB = [
         image: reactLogo,
         imageWidth: "38px",
         imageHeight: "38px",
-        color: "",
+        color: "rgb(0, 182, 211)",
     },
     {
         name: "JQuery",
@@ -77,7 +81,7 @@ const WEB = [
         image: jqueryLogo,
         imageWidth: "38px",
         imageHeight: "38px",
-        color: "",
+        color: "rgb(70, 144, 200)",
     }
 ];
 
@@ -88,23 +92,7 @@ const PROGRAMMING = [
         image: cppLogo,
         imageWidth: "35px",
         imageHeight: "38px",
-        color: "",
-    },
-    {
-        name: "Java",
-        level: "70",
-        image: javaLogo,
-        imageWidth: "40px",
-        imageHeight: "40px",
-        color: "",
-    },
-    {
-        name: "Python",
-        level: "70",
-        image: pythonLogo,
-        imageWidth: "35px",
-        imageHeight: "35px",
-        color: "",
+        color: "rgb(91, 151, 215)",
     },
     {
         name: "Javascript",
@@ -112,7 +100,23 @@ const PROGRAMMING = [
         image: javascriptLogo,
         imageWidth: "38px",
         imageHeight: "38px",
-        color: "",
+        color: "rgb(240, 197, 15)",
+    },
+    {
+        name: "Java",
+        level: "70",
+        image: javaLogo,
+        imageWidth: "40px",
+        imageHeight: "40px",
+        color: "rgb(245, 70, 36)",
+    },
+    {
+        name: "Python",
+        level: "70",
+        image: pythonLogo,
+        imageWidth: "35px",
+        imageHeight: "35px",
+        color: "rgb(240, 197, 15)",
     }
 ];
 
@@ -120,34 +124,34 @@ const OTHER = [
     {
         name: "SQL",
         level: "72.5",
-        image: null,
+        image: SQLLogo,
         imageWidth: "38px",
         imageHeight: "38px",
-        color: "",
+        color: "rgb(255, 164, 0)",
     },
     {
         name: "Git + Github",
         level: "85",
-        image: null,
+        image: gitLogo,
         imageWidth: "38px",
         imageHeight: "38px",
-        color: "",
+        color: "rgb(230, 89, 0)",
     },
     {
         name: "VS Code",
         level: "90",
-        image: null,
+        image: VSCodeLogo,
         imageWidth: "38px",
         imageHeight: "38px",
-        color: "",
+        color: "rgb(4, 140, 210)",
     },
     {
         name: "Netbeans",
         level: "75",
-        image: null,
-        imageWidth: "38px",
-        imageHeight: "38px",
-        color: "",
+        image: netbeansLogo,
+        imageWidth: "33px",
+        imageHeight: "37px",
+        color: "rgb(159, 220, 0)",
     }
 ];
 

@@ -60,3 +60,23 @@ and (max-width: 800px) {
 }
 
 /* ---------------- CONTAINER3 --------------------- */
+@media screen
+and (max-width: 600px) {
+    .skills-separator {transition: none; width: 100%; height: 2px !important; margin: 15px 0 15px 0;}
+    .skills-horizontal {flex-direction: column;}
+    .skills-selection {justify-content: space-between; flex-direction: row; width: 100%;}
+    .selectable-title {height: 30px;}
+}
+
+@media screen 
+and (max-width: 400px) {
+    .selection {font-size: 19px !important;}
+    .selectable-title {height: 26px;}
+}
+
+/* ---------------- CONTAINER5 --------------------- */
+@media screen
+and (max-width: 800px) {
+    .character-box {display: none;}
+    .form {width: 100%;}
+}

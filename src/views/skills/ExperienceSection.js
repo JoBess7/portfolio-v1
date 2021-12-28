@@ -15,7 +15,7 @@ export default function ExperienceSection({title, visible, experiences}) {
 
                         <div className="exp-name">
                             <div style={{width: exp.level + "%"}} className="exp-lvl-container">
-                                <div style={{transition: "width " + exp.level/100 + "s ease-in-out"}} className={`exp-lvl ${visible ? "max-lvl" : ""}`}></div>
+                                <div style={{backgroundColor: exp.color, transition: "width " + exp.level/100 + "s ease-in-out"}} className={`exp-lvl ${visible ? "max-lvl" : ""}`}></div>
                             </div>
                             <div style={{position: "relative"}}>{exp.name}</div>
                         </div>
