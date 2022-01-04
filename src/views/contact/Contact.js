@@ -1,10 +1,55 @@
 import SectionTitle from "../../components/SectionTitle";
-import mustache from "../../assets/images/mustache.png";
 import Input from "../../components/Input";
 import TextArea from "../../components/TextArea";
 import Button from '../../components/Button'
+import { EMAILJS } from "../../assets/constants";
+import emailjs from "emailjs-com";
+import SimpleLoader from "../../components/SimpleLoader";
+import { useState } from "react";
+import styled from "styled-components";
+import { useInView } from "react-intersection-observer";
+
+const NoSubmit = styled.div`
+    transition: all .2s;
+    color: ${props => props.theme.lightBlue}
+`
 
 export default function Contact(props) {
+
+    const [ scratcherRef, scratcherInView ] = useInView({
+        threshold: 0,
+        triggerOnce: true
+    });
+
+
+    const [noSubmitClasses, setNoSubmitClasses] = useState("opacity0");
+    const [loaderClasses, setLoaderClasses] = useState("");
+    const [formClasses, setFormClasses] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setLoaderClasses("loader-appear");
+        setFormClasses("form-disappear");
+
+        emailjs.sendForm(
+            EMAILJS.SERVICE_ID, 
+            EMAILJS.TEMPLATE_ID, 
+            document.getElementsByClassName("form")[0], 
+            EMAILJS.USER_ID)
+        .then((result) => {
+            console.log(result);
+            setLoaderClasses("loader-disappear");
+            setFormClasses("form-appear");
+        },
+        (error) => {
+            setLoaderClasses("loader-disappear");
+            setNoSubmitClasses("opacity1");
+        })
+        .catch((error) => {
+            console.log("O no! An error occured!")
+        });
+    };
+
     return (
         <div className="contact">
             <div className="contact-flex website-width">
@@ -12,52 +57,25 @@ export default function Contact(props) {
                     <SectionTitle title="Contact Me"/>
                 </div>
                 <div className="character-flex">
-                    <div className="form-flex">
-                        <form className="form">
-                            <Input margintop={1} marginbottom={0} what={"Name"} id={"Name"}/>
-                            <Input margintop={3} marginbottom={0} what={"Email"} id={"Email"}/>
-                            <Input margintop={3} marginbottom={0} what={"Subject"} id={"Subject"}/>
-                            <TextArea margintop={3} marginbottom={1} what={"Message"} id={"Message"}/>
-                            <Button style={{borderRadius: "10px"}} text="send"/>
-                        </form>
-                        <div className="character-box">
-                            <div className="character">
-                                <div className="hat">
-                                    <div className="hat-top"></div>
-                                    <div className="hat-mid hat-mid1"></div>
-                                    <div className="hat-mid hat-mid2"></div>
-                                    <div className="hat-mid hat-mid3"></div>
-                                </div>
-                                <div className="head">
-                                    <div className="triangle triangle-right"></div>
-                                    <div className="triangle triangle-left"></div>
-                                    <div className="ear ear-right"></div>
-                                    <div className="ear ear-left"></div>
-                                    <div className="head-main"></div>
-                                    <div className="mouth">
-                                        <div className="mouth-shine"></div>
-                                    </div>
-                                    <img alt="" src={mustache} className="mustache"></img>
-                                </div>
-                                <div className="neck">
-                                    <div className="neck-skin">
-                                        <div className="neck-left"></div>
-                                        <div className="neck-right"></div>
-                                    </div>
-                                </div>
-                                <div className="shirt">
-                                    <div className="shirt-top">
-                                        <div className="shirt-top-right"></div>
-                                        <div className="shirt-top-left"></div>
-                                    </div>
+                    <div className={`form-flex ${scratcherInView ? "" : "element-hidden"}`}>
+                        <NoSubmit ref={scratcherRef} className={"unable-to-submit " + noSubmitClasses}>
+                            <div className="error-submit">
+                                Oops! An <span className="error">error</span> occured! <br /> <br />
+                                If the problem persists, you can reach me at <span className="email">jbey078@gmail.com</span>.
+                            </div>   
+                        </NoSubmit>
 
-                                    <div className="shirt-bottom">
-                                    <div className="shirt-bottom-right"></div>
-                                        <div className="shirt-bottom-left"></div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div style={{opacity: 0}} className={"loader-flex " + loaderClasses}>
+                            <SimpleLoader/>
                         </div>
+
+                        <form className={"form " + formClasses}>
+                            <Input margintop={1} marginbottom={0} display="Name" what={"fullname"} id={"fullname"}/>
+                            <Input margintop={3} marginbottom={0} display="Email" what={"email"} id={"email"}/>
+                            <Input margintop={3} marginbottom={0} display="Subject" what={"subject"} id={"subject"}/>
+                            <TextArea margintop={3} marginbottom={1} display="Message" what={"message"} id={"message"}/>
+                            <Button action={handleSubmit} text="submit"/>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -25,5 +25,4 @@ yarn-error.log*
 
 .test.js
 /setupTests.js
-
-
+/constants.js

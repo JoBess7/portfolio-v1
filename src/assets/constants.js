@@ -13,6 +13,27 @@ import SQLLogo from "./images/database_logo.png";
 import gitLogo from "./images/git_logo.png";
 import VSCodeLogo from "./images/vscode_logo.png";
 import netbeansLogo from "./images/netbeans_logo.png";
+import mustache from "./images/mustache.png";
+import construction from "./images/under_construction.png";
+
+export const IMAGES = [
+    igemLogo,
+    pictureOfMe,
+    cssLogo,
+    htmlLogo,
+    reactLogo,
+    jqueryLogo,
+    cppLogo,
+    javaLogo,
+    pythonLogo,
+    javascriptLogo,
+    SQLLogo,
+    gitLogo,
+    VSCodeLogo,
+    netbeansLogo,
+    mustache,
+    construction
+]
 
 export const HEADER_WIDTH = 95;
 export const DELTA_HEADER = 150;
@@ -160,3 +181,10 @@ export const EXPERIENCES = [
     [PROGRAMMING, "Coding"],
     [OTHER, "Other"],
 ];
+
+export const EMAILJS = {
+    SERVICE_ID: "service_9qijcbj",
+    USER_ID: "user_lttcoxsnlj4xL4ABRPMYo",
+    ACCESS_TOKEN: "ccfd79b13f07e74b771add43be9d662d",
+    TEMPLATE_ID: "template_jcwg87q"
+}

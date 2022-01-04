@@ -23,7 +23,7 @@ export default function About(props) {
         <div className="about">
             <div className="about-flex website-width">
                 <SectionTitle inView={scratcherInView} title="About"/>      
-                <div ref={scratcherRef} className={`about-hori-flex ${scratcherInView ? "" : "about-hidden"}`}>
+                <div ref={scratcherRef} className={`about-hori-flex ${scratcherInView ? "" : "element-hidden"}`}>
                     <img 
                         src={ABOUT.image}
                         className={"about-img " + hoverClasses}

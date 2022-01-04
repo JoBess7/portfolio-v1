@@ -12,18 +12,8 @@
     align-self: center;
 }
 
-.button::before {
-    transition: all 0.3s ease-in-out;
-    left: -160px;
-    position: absolute;
-    content: "";
-    width: 160px;
-    height: 45px;
-    background-color: lightblue;
-}
-
-.button:hover::before {
-    transform: translateX(160px);
+.button:hover {
+    box-shadow: rgba(255, 255, 255, 0) 0 0;
 }
 
 .text-button {
@@ -32,7 +22,6 @@
     letter-spacing: 2px;
     font-variant: small-caps;
     font-family: "Wotfard-Regular";
-    z-index: 10;
 }
 
 
@@ -238,3 +227,293 @@
     85% {transform: scale(1.1);}
     100% {transform: scale(1);}
 }
+
+/* --------------------- Character.js ----------------------*/
+
+.character-flex {
+    display: flex;
+    width: 100%;
+}
+
+
+.character-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+}
+
+.character {
+    padding-right: 3vw;
+    width: 15vw;
+    height: 35vw;
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.hat {
+    width: 100%;
+    height: 32%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.hat-top {
+    border: none;
+    width: 100%;
+    height: 75%;
+    border-radius: 50% 50% 0% 0% / 90% 90% 0% 0%;
+    background-color: rgb(26, 94, 127);;
+}
+
+.hat-mid1, .hat-mid2 {
+    width: 100%;
+    height: 8%;
+}
+
+.hat-mid1 {background-color: rgb(29, 101, 135);}
+.hat-mid2 {background: rgb(26, 94, 127);}
+.hat-mid3 {
+    width: 135%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    height: 9%;
+    background-color: rgb(255, 94, 39);
+}
+
+.head {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.head-main {
+    background-color: rgb(243, 189, 139);
+    width: 100%;
+    height: 100%;
+    border-radius: 0% 0% 50% 50% / 0% 0% 45% 45%;
+    z-index: 5;
+}
+
+.mouth {
+    z-index: 10;
+    align-self: center;
+    width: 50%;
+    height: 20%;
+    position: absolute;
+    overflow: hidden;
+    bottom: 20%;
+    border-radius: 0% 0% 50% 50% / 0% 0% 90% 90%;
+    background-color: rgb(232, 232, 232);
+    box-shadow: 2px 5px rgba(165, 165, 165, 0.199);
+}
+
+.mouth-shine {
+    position: absolute;
+    left: -4vw;
+    background-color: rgb(255, 255, 255);
+    width: 4vw;
+    height: 100%;
+    animation-delay: 1s;
+    animation: mouth-shine 3.5s linear infinite;
+}
+
+@keyframes mouth-shine {
+    0% {left: -4vw;}
+    10% {left: 100%;}
+    100% {left: 100%;}
+}
+
+.ear {
+    border: 5px solid rgb(252, 194, 139);
+    top: 2%;
+    background-color: rgb(235, 181, 134);
+    width: 20%;
+    z-index: 1;
+    height: 20%;
+    position: absolute;
+    border-radius: 50%;
+}
+.ear-right {right: -10%;}
+.ear-left {left: -10%;}
+
+.mustache {
+    animation: mustacheRotate 2.2s linear infinite;
+    bottom: 18%;
+    position: absolute;
+    align-self: center;
+    width: 90%;
+    height: auto;
+    z-index: 10;
+}
+@keyframes mustacheRotate {
+    0% {transform: rotate(0);}
+    25% {transform: rotate(7deg);}
+    50% {transform: rotate(0deg);}
+    75% {transform: rotate(-7deg);}
+    100% {transform: rotate(0deg);}
+}
+
+.triangle {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+
+.triangle-right {
+    right: 0;
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-top: 4vw solid rgb(102, 75, 53);
+    border-left: 4vw solid transparent;
+}
+
+.triangle-left {
+    left: 0;
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-top: 4vw solid rgb(102, 75, 53);
+    border-right: 4vw solid transparent;
+}
+
+.neck {
+    position: relative;
+    top: -1%;
+    height: 16%;
+    width: 14%;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+}
+
+.neck-skin {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.neck-left {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(235, 181, 134);
+}
+
+.neck-right {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(243, 189, 139);
+}
+
+.shirt {
+    position: relative;
+    top: -8%;
+}
+
+.shirt-top {
+    display: flex;
+    justify-content: center;
+}
+
+.shirt-top-right {
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-right : 1.5vw solid transparent;
+    border-bottom : 1.5vw solid rgb(29, 101, 135);
+    border-left : 1.5vw solid transparent;
+}
+
+.shirt-top-left {
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-right : 1.5vw solid transparent;
+    border-bottom : 1.5vw solid rgb(26, 94, 194);
+    border-left : 1.5vw solid transparent;
+}
+
+.shirt-bottom-right {
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-top : 3vw solid rgb(29, 101, 135);
+    border-left : 3vw solid transparent;
+}
+
+.shirt-bottom-left {
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-top : 3vw solid rgb(26, 94, 194);
+    border-right : 3vw solid transparent;
+}
+
+/* -------------------- SimpleLoader.js ---------------------*/
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    z-index: 10;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }

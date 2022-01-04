@@ -70,7 +70,7 @@ export default function Heart(props) {
 
     useEffect(() => {
         setTheme(props.theme);
-    });
+    }, [props.theme]);
 
     return(
         <div className={"heart-flex"} style={{position: "relative"}}>

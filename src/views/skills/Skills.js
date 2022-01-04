@@ -27,7 +27,7 @@ export default function Skills({theme}) {
         <div className="skills" >
             <div className="skills-flex website-width">
                 <SectionTitle inView={scratcherInView} title="A Few Skills"/>
-                <div className="skills-horizontal">
+                <div className={`skills-horizontal ${scratcherInView ? "" : "element-hidden"}`}>
                     <div ref={scratcherRef} className="skills-selection">
                         {EXPERIENCES.map((skill, idx) => {
                             return (

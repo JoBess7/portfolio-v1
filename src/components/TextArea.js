@@ -11,7 +11,7 @@ const TextAreay = styled.textarea`
     border-bottom: 2px solid ${props => props.theme.lightBlue};
 `;
 
-export default function TextArea({marginbottom, margintop, what, id}) {
+export default function TextArea({display, marginbottom, margintop, what, id}) {
 
     const [value, setValue] = useState(" ");
     const [valid, setValid] = useState(false);
@@ -57,7 +57,7 @@ export default function TextArea({marginbottom, margintop, what, id}) {
                 id={id} 
                 name={id}
             />
-            <Label className="label" for={id}>{what}</Label>
+            <Label className="label" htmlFor={id}>{display}</Label>
             <IoIosCheckmarkCircle fill="rgb(0, 175, 0)" size={20} className={"input-icon " + iconClasses}/>
         </div>
     );

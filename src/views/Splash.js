@@ -3,6 +3,9 @@ import Header from "./header/Header";
 import Main from "./main/Main";
 import About from './about/About'
 import Foot from "./foot/Foot";
+import Skills from "./skills/Skills";
+import Contact from "./contact/Contact";
+import Works from "./works/Works";
 import { useInView } from "react-intersection-observer";
 
 import "../styles/reusables.css"
@@ -16,6 +19,7 @@ import "../styles/mainStyles.css";
 import "../styles/aboutStyles.css";
 import "../styles/skillsStyles.css";
 import "../styles/contactStyles.css"
+import "../styles/worksStyles.css";
 
 /* Queries */
 import "../styles/_queries.css";
@@ -24,10 +28,9 @@ import "../styles/_queries.css";
 import "../styles/foot.css";
 
 import { THEME_TOGGLE_SPEED } from "../assets/constants";
-import Skills from "./skills/Skills";
-import Contact from "./contact/Contact";
 
 const Page = styled.div`
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,9 +41,9 @@ const Page = styled.div`
 
 export default function Splash(props) {
 
-    const {theme} = props;
+    const {theme, pageDisplay} = props;
 
-    const [ ref, inView ] = useInView({
+    const [ ref, inView ] = useInView({
         threshold: 0,
     });
 
@@ -50,7 +53,7 @@ export default function Splash(props) {
     }
 
     return (
-        <Page>
+        <Page style={{display: `${pageDisplay ? "flex" : "none"}`}}>
 
             <div ref={ref} className="initial-trigger"></div>
 
@@ -77,6 +80,8 @@ export default function Splash(props) {
             <Skills
                 theme={theme}
             />
+
+            <Works/>
 
             <Contact/>
         </Page>

@@ -11,15 +11,13 @@ const Inputy = styled.input`
     border-bottom: 2px solid ${props => props.theme.lightBlue};
 `;
 
-export default function Input({marginbottom, margintop, what, id}) {
+export default function Input({val, display, marginbottom, margintop, what, id}) {
 
-    const [value, setValue] = useState(" ");
     const [valid, setValid] = useState(false);
     const [iconClasses, setIconClasses] = useState("icon-small");
 
     function modifyValue(event) {
         var newValue = event.target.value;
-        setValue(newValue);
 
         if(!valid && (newValue !== "" || newValue !== " ")) {
             setIconClasses("icon-big");
@@ -32,7 +30,7 @@ export default function Input({marginbottom, margintop, what, id}) {
 
     return(
         <div style={{marginTop: `${margintop * 25}px`, marginBottom: `${marginbottom * 25}px` }} className="input-div">
-            <Inputy 
+            <Inputy
                 spellCheck="false" 
                 onChange={(event) => {modifyValue(event)}} 
                 placeholder=" " 
@@ -43,7 +41,7 @@ export default function Input({marginbottom, margintop, what, id}) {
                 id={id} 
                 name={id}
             />
-            <Label className="label" for={id}>{what}</Label>
+            <Label className="label" htmlFor={id}>{display}</Label>
             <IoIosCheckmarkCircle fill="rgb(0, 175, 0)" size={20} className={"input-icon " + iconClasses}/>
         </div>
     );
