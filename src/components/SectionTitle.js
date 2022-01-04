@@ -5,7 +5,7 @@ import Scratch from "./Scratch";
 const SectionText = styled.div`
     position: relative;
     transition: all ${THEME_TOGGLE_SPEED}s;
-    color: ${props => props.theme.lightBlue};
+    color: ${props => props.theme.title};
     text-shadow: ${props => props.theme.shadowDimensions} ${props => props.theme.textShadow};
 `
 

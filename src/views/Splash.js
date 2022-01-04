@@ -36,7 +36,7 @@ const Page = styled.div`
     align-items: center;
     width: 100vw;
     transition: all ${THEME_TOGGLE_SPEED}s;
-    background: ${props => props.theme.pageBackground}
+    background: ${props => props.theme.pageBackground};
 `
 
 export default function Splash(props) {

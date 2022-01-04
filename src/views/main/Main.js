@@ -4,17 +4,17 @@ import { useInView } from "react-intersection-observer";
 
 const Name = styled.div`
     transition: all ${THEME_TOGGLE_SPEED}s;
-    color: ${props => props.theme.lightBlue};
+    color: ${props => props.theme.title};
     text-shadow: ${props => props.theme.shadowDimensions} ${props => props.theme.textShadow};
 `
 const PersonalDesc = styled.div`
     transition: all ${THEME_TOGGLE_SPEED}s;
     color: ${props => props.theme.description};
-    text-shadow: 1px 1px #B3C4D5;
+    text-shadow: 0px 0px #B3C4D5;
 `
 const Separator = styled.div`
     transition: all ${THEME_TOGGLE_SPEED}s;
-    background-color: ${props => props.theme.separator};
+    background-color: ${props => props.theme.grey};
     width: 160px;
     height: 1px;
     margin: 30px 0 30px 0;

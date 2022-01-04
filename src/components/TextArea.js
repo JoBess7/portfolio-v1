@@ -3,12 +3,12 @@ import styled from "styled-components";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 
 const Label = styled.label`
-    color: ${props => props.theme.lightBlue};
+    color: ${props => props.theme.title};
 `;
 
 const TextAreay = styled.textarea`
-    color: ${props => props.theme.lightBlue};
-    border-bottom: 2px solid ${props => props.theme.lightBlue};
+    color: ${props => props.theme.title};
+    border-bottom: 2px solid ${props => props.theme.title};
 `;
 
 export default function TextArea({display, marginbottom, margintop, what, id}) {

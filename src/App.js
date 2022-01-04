@@ -6,36 +6,40 @@ import SimpleLoader from './components/SimpleLoader';
 
 const LightTheme = {
   generalized: "black",
-  pageBackground: "rgba(246, 245, 240, 1)",
+  pageBackground: "rgba(250, 245, 240, 1)",
   headerLink: "black",
-  headerBackground: "",
+  headerBackground: "rgba(250, 245, 240, 1)",
+  headerShadow: "0px 1px 1px #C6C6C6",
   burger: "#000",
   blue: "#1b71c2",
-  lightBlue: "rgba(18, 27, 49, 0.95)",
-  grey: "rgba(194, 194, 194, 0.9)",
+  title: "#162521",
+  grey: "#B7B7B7",
   separator: "black",
-  description: "rgba(18, 27, 49, 0.95)",
+  description: "#162521",
   textShadow: "#C9D1DA",
   shadowDimensions: "4px 4px",
   buttonShadow: "rgba(0, 0, 0, 0.3)",
-  buttonText: "#d2d2d2"
+  buttonText: "#d2d2d2",
+  buttonHover: "#BCE2FF",
 }
 
 const DarkTheme = {
   generalized: "white",
-  pageBackground: 'rgba(0, 4, 11, 1)',
+  pageBackground: '#0a192f',
   headerLink: "#E0E3E6",
-  headerBackground: "#0E141B",
+  headerBackground: '#0d1f34',
+  headerShadow: "0px 1px 50px #081728",
   burger: "#EEEFF0",
   blue: "#1b71c2",
-  lightBlue: "#dee6f0",
+  title: "#c1cceb",
   grey: "rgba(224, 224, 224, 0.3)",
   separator: "#E1E1E1",
-  description: "#d2d2d2",
+  description: "#8791af",
   textShadow: "#7B9DBF",
   shadowDimensions: "2px 3px",
   buttonShadow: "rgba(255, 255, 255, 0.25)",
   buttonText: "rgba(18, 27, 49, 0.95)",
+  buttonHover: "#1b71c2",
 }
 
 const themes = {

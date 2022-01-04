@@ -1,5 +1,5 @@
 import { DarkModeSwitch } from "react-toggle-dark-mode";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Burger from "./Burger";
 import Linker from "./Linker";
 import Heart from "../../components/Heart";
@@ -9,20 +9,30 @@ import { themeTogglerProperties } from "../../assets/themeTogglerProperties";
 
 const HeaderFlex = styled.div`
     transition: all ${THEME_TOGGLE_SPEED}s;
-    background-color: ${props => props.theme.pageBackground}
+    background-color: ${props => props.theme.headerBackground};
+    box-shadow: ${props => props.theme.headerShadow};
 `
 const HeaderContainer = styled.div`
     width: ${HEADER_WIDTH}%;
 `
 
-function Header(props) {
-
-    const {theme} = props;
+function Header({ theme, inView, changeTheme }) {
 
     const [canAnimate, setCanAnimate] = useState(true);
     const [isDarkMode, setIsDarkMode] = useState(false);
     const [burgerOpened, setBurgerOpened] = useState(false);
 
+    useEffect(() => {
+        window.addEventListener('scroll', (e) => scrollEvent(e));
+
+        return () => {
+            window.removeEventListener('scroll', (e) => scrollEvent(e));
+        }
+    }, []);
+
+    function scrollEvent() {
+        // handle scroll
+    }
 
     function animateButton() {
         setCanAnimate(false);
@@ -38,12 +48,12 @@ function Header(props) {
     return (
         <HeaderFlex className={`header`}>
             <HeaderContainer className="header-container">
-                <div className={props.inView ? "burger-flex header-show-comp" : "burger-flex header-hidden-comp"}>
-                    <Burger sendBurgerState={sendBurgerState} theme={props.theme}/>
+                <div className={inView ? "burger-flex header-show-comp" : "burger-flex header-hidden-comp"}>
+                    <Burger sendBurgerState={sendBurgerState} theme={theme}/>
                     <Linker burgerOpened={burgerOpened}/>
                 </div>
 
-                <div className={props.inView ? "heart-flex header-show-comp" : "heart-flex header-hidden-comp"}>
+                <div className={inView ? "heart-flex header-show-comp" : "heart-flex header-hidden-comp"}>
                     <Heart theme={theme} />
                     <DarkModeSwitch
                         animationProperties={themeTogglerProperties}
@@ -51,7 +61,7 @@ function Header(props) {
                         onChange={() => {
                             if(canAnimate) {
                                 animateButton();
-                                props.changeTheme();
+                                changeTheme();
                                 setIsDarkMode(!isDarkMode);
                             }
                         }}

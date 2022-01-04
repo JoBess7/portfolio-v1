@@ -3,9 +3,11 @@ import { THEME_TOGGLE_SPEED } from "../assets/constants";
 
 const AnimatedButton = styled.button`
     transition: all .2s;
-    background-color: ${props => props.theme.buttonText};
+    background-color: ${props => props.theme.pageBackground};
     border: 1px solid ${props => props.theme.generalized};
-    box-shadow: 5px 7px 20px ${props => props.theme.buttonShadow};
+    :hover {
+        background-color: ${props => props.theme.buttonHover};
+    }
 `;
 
 const ButtonText = styled.div`

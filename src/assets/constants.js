@@ -1,5 +1,5 @@
 // Hardcoded
-import igemLogo from './images/igem_logo.svg';
+import igemLogo from './images/igem_logo.png';
 import pictureOfMe from './images/pictureOfMe.jpeg';
 import cssLogo from './images/css_logo.png';
 import htmlLogo from './images/html_logo.svg';
@@ -41,33 +41,33 @@ export const THEME_TOGGLE_SPEED = 0.5;
 export const PROJECTS = [
     {
         title: "iGem ULaval 2021",
-        description: "Fully responsive website with more than 15 static sub URLS. Built with JQuery, CSS and HTML under 3 weeks.",
+        description: "Fully responsive website with more than 15 static sub URLS, built in 3 weeks in the context of iGEM, a worldwide synthetic biology competition gathering more than 7000 students",
         imageURL: igemLogo,
-        fillUp: "#253633",
         link: "https://2021.igem.org/Team:ULaval",
-        github: "repo"
+        github: "repo",
+        featured: ["HTML", "CSS", "JQuery"]
+    },
+    {
+        title: "GithubSpy",
+        description: "idkfk kddkdkkdk",
+        imageURL: igemLogo,
+        link: "",
+        github: "",
+        featured: []
     },
     {
         title: "",
         description: "",
         imageURL: null,
-        fillUp: "#383353",
         link: "",
-        github: ""
-    },
-    {
-        title: "",
-        description: "",
-        imageURL: null,
-        fillUp: "#233263",
-        link: "",
-        github: ""
+        github: "",
+        featured: []
     }
 ]
 
 export const ABOUT = 
 {
-    description: "Hi! I'm a second year software engineering student at Laval University in Quebec, Canada. I'm currently maintaining a 4.03 GPA. I love using technologies such as JavaScript, HTML and CSS to create amazing websites. At the moment, I am looking into relational database models and JavaScript frameworks such as React.js. When I'm not coding, you'll most likely find me playing video games or on the court shooting some hoops.",
+    description: "Hi! I'm a second year software engineering student at Laval University in Quebec, Canada. I'm currently maintaining a 4.03 GPA. I love using technologies such as JavaScript, HTML and CSS to create amazing websites. At the moment, I am looking into relational database models and JavaScript frameworks such as React.js. Currently, I have the privilege of working at Alcoa as a system analyst. When I'm not coding, you'll most likely find me playing video games or on the court shooting some hoops.",
     image: pictureOfMe      
 }
 
@@ -108,14 +108,6 @@ const WEB = [
 
 const PROGRAMMING = [ 
     {
-        name: "C++",
-        level: "80",
-        image: cppLogo,
-        imageWidth: "35px",
-        imageHeight: "38px",
-        color: "rgb(91, 151, 215)",
-    },
-    {
         name: "Javascript",
         level: "80",
         image: javascriptLogo,
@@ -130,6 +122,14 @@ const PROGRAMMING = [
         imageWidth: "40px",
         imageHeight: "40px",
         color: "rgb(245, 70, 36)",
+    },
+    {
+        name: "C++",
+        level: "80",
+        image: cppLogo,
+        imageWidth: "35px",
+        imageHeight: "38px",
+        color: "rgb(91, 151, 215)",
     },
     {
         name: "Python",
@@ -177,8 +177,8 @@ const OTHER = [
 ];
 
 export const EXPERIENCES = [
-    [WEB, "Web"],
     [PROGRAMMING, "Coding"],
+    [WEB, "Web"],
     [OTHER, "Other"],
 ];
 

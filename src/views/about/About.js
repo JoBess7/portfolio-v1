@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const AboutDescription = styled.div`
     transition: all ${THEME_TOGGLE_SPEED}s;
-    color: ${props => props.theme.description};
+    color: ${props => props.theme.title};
 `
 
 export default function About(props) {

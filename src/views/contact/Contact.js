@@ -11,7 +11,7 @@ import { useInView } from "react-intersection-observer";
 
 const NoSubmit = styled.div`
     transition: all .2s;
-    color: ${props => props.theme.lightBlue}
+    color: ${props => props.theme.title}
 `
 
 export default function Contact(props) {

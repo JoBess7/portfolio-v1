@@ -102,6 +102,10 @@
     /* border: 1px solid rgba(0, 4, 11, 1); */
 }
 
+.exp-name-text {
+    padding-top: 5px;
+}
+
 .exp-img-container {
     margin-right: 5px;
     width: 50px;

@@ -3,9 +3,10 @@ import styled from "styled-components";
 import { THEME_TOGGLE_SPEED } from "../../assets/constants";
 
 const SectionText = styled.div`
+    padding-top: 5px;
     position: relative;
     transition: all ${THEME_TOGGLE_SPEED}s;
-    color: ${props => props.theme.lightBlue};
+    color: ${props => props.theme.title};
     text-shadow: 1px 1px ${props => props.theme.textShadow};
 `
 
