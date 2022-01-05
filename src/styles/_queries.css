@@ -74,6 +74,28 @@ and (max-width: 400px) {
     .selectable-title {height: 26px;}
 }
 
+/* ---------------- CONTAINER4 --------------------- */
+@media screen 
+and (max-width: 1000px) {
+    .project {justify-content: center !important;}
+    .project-flex {padding: 0 !important; margin: 0 !important; width: 90% !important; position: absolute; width: 100%; align-items: flex-start !important;}
+    .project-desc {padding: 0 !important; text-align: start !important; background-color: rgba(255, 255, 255, 0) !important; box-shadow: none !important;}
+    .project-img {filter: brightness(12%);}
+    .project-img-container {position: relative; width: 100%;}
+    .project-name {color: #c1cceb !important; text-shadow: none !important;}
+    .ft {color: #a5b1ce !important;}
+}
+
+@media screen
+and (min-width: 1001px)
+and (max-width: 1200px) {
+    .project-works-title {margin-bottom: 50px;}
+}
+@media screen
+and (min-width: 1201px) {
+    .project-works-title {margin-bottom: 100px;}
+}
+
 /* ---------------- CONTAINER5 --------------------- */
 @media screen
 and (max-width: 800px) {

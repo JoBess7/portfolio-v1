@@ -18,9 +18,15 @@ const LightTheme = {
   description: "#162521",
   textShadow: "#C9D1DA",
   shadowDimensions: "4px 4px",
+
   buttonShadow: "rgba(0, 0, 0, 0.3)",
   buttonText: "#d2d2d2",
   buttonHover: "#BCE2FF",
+
+  projectBackground: '#0d1f34',
+  projectDescription:  "#8791af",
+  projectShadow: "1px 2px 15px #081728",
+  projectFt: "#162521"
 }
 
 const DarkTheme = {
@@ -37,9 +43,15 @@ const DarkTheme = {
   description: "#8791af",
   textShadow: "#7B9DBF",
   shadowDimensions: "2px 3px",
+
   buttonShadow: "rgba(255, 255, 255, 0.25)",
   buttonText: "rgba(18, 27, 49, 0.95)",
   buttonHover: "#1b71c2",
+
+  projectBackground: '#0d1f34',
+  projectDescription:  "#8791af",
+  projectShadow: "0px 1px 50px #081728",
+  projectFt: "#a5b1ce"
 }
 
 const themes = {

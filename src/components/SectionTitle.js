@@ -9,12 +9,12 @@ const SectionText = styled.div`
     text-shadow: ${props => props.theme.shadowDimensions} ${props => props.theme.textShadow};
 `
 
-export default function SectionTitle(props) {
+export default function SectionTitle({class2, title, inView}) {
     return(
-        <div className="section-title-flex">
+        <div className={`section-title-flex ${class2}`}>
             <SectionText className="title-title">
-                {props.title}
-                <Scratch visible={props.inView}/>
+                {title}
+                <Scratch visible={inView}/>
             </SectionText>
         </div>
     );

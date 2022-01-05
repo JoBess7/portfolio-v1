@@ -15,9 +15,8 @@
 .project {
     width: 100%;
     display: flex;
-    margin-top: 100px;
+    margin-bottom: 100px;
     position: relative;
-    height: 25vw;
     align-items: center;
 }
 
@@ -42,20 +41,41 @@
 
 .project-ft-flex {
     display: flex;
-    font-family: "Wotfard-Regular";
+    font-family: "Wotfard-SemiBold";
     font-size: 15px;
+    align-items: center;
 }
 
 .project-img-container {
-    width: 70%;
+    width: 60%;
     position: absolute;
 }
 
 .project-img {
+    transition: all .5s;
     top: 0;
     border-radius: 5px;
     z-index: 1;
     width: 100%;
     height: auto;
     border: 1px solid #0d1f34;
+}
+.project-img:hover {
+    transform: scale(1.02);
+}
+
+.project-link-flex {
+    margin-top: 15px;
+}
+
+.project-icon {
+    transition: all .2s;
+    stroke: grey;
+    stroke-width: 2;
+}
+.project-icon:visited {
+    stroke: rgb(41, 116, 230);
+}
+.project-icon:hover {
+    stroke: rgb(41, 116, 230);
 }

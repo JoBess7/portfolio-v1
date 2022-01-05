@@ -41,28 +41,31 @@ export const THEME_TOGGLE_SPEED = 0.5;
 export const PROJECTS = [
     {
         title: "iGem ULaval 2021",
-        description: "Fully responsive website with more than 15 static sub URLS, built in 3 weeks in the context of iGEM, a worldwide synthetic biology competition gathering more than 7000 students",
+        description: "Fully responsive website with more than 15 static sub URLS, built in 3 weeks in the context of iGEM, a worldwide synthetic biology competition gathering more than 7000 students every year",
         imageURL: igemLogo,
         link: "https://2021.igem.org/Team:ULaval",
         github: "repo",
-        featured: ["HTML", "CSS", "JQuery"]
-    },
-    {
-        title: "GithubSpy",
-        description: "idkfk kddkdkkdk",
-        imageURL: igemLogo,
-        link: "",
-        github: "",
-        featured: []
+        featured: ["HTML", "CSS", "JQuery"],
+        imagePath: "igem_logo.png"
     },
     {
         title: "",
-        description: "",
+        description: "Coming soon...",
         imageURL: null,
         link: "",
         github: "",
-        featured: []
-    }
+        featured: [],
+        imagePath: "../assets/images/igem_logo.png"
+    },
+    {
+        title: "",
+        description: "Coming soon...",
+        imageURL: null,
+        link: "",
+        github: "",
+        featured: [],
+        imagePath: "../assets/images/igem_logo.png"
+    },
 ]
 
 export const ABOUT = 

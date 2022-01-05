@@ -1,10 +1,8 @@
-import {FiGithub} from "react-icons/fi";
-import {FiLinkedin} from "react-icons/fi";
+import { FiGithub } from "react-icons/fi";
+import { FiLinkedin } from "react-icons/fi";
 import { useState } from "react";
 
-export default function Foot(props) {
-
-    const { initialIconColor, animatedIconColor } = props;
+export default function Foot({ initialIconColor, animatedIconColor }) {
 
     const [githubClasses, setGithubClasses] = useState("icon icon-anim-down");
     const [githubIconColor, setGithubIconColor] = useState(initialIconColor);
