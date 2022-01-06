@@ -1,41 +1,39 @@
 import { FiGithub } from "react-icons/fi";
 import { FiLinkedin } from "react-icons/fi";
-import { useState } from "react";
 
-export default function Foot({ initialIconColor, animatedIconColor }) {
-
-    const [githubClasses, setGithubClasses] = useState("icon icon-anim-down");
-    const [githubIconColor, setGithubIconColor] = useState(initialIconColor);
-
-    const [LIIClasses, setLIIClasses] = useState("icon icon-anim-down");
-    const [LIIconColor, setLIIconColor] = useState(initialIconColor);
+export default function Foot({ lineColor, emailTag, initialIconColor }) {
 
     return(
         <div className="foot">
             <div className="foot-flex">
                 <div className="foot-icon-flex" >
-                    
-                    <div className="icon-container">
-                        <a href="">
+                    <div style={{marginBottom: "40px"}} className="icon-container">
+                        <a href="https://github.com/JoBess7">
                             <FiGithub 
-                            className={githubClasses}
-                            size={23}
-                            stroke={githubIconColor}
-                            strokeWidth={2}/>
+                                size={26}
+                                stroke={initialIconColor}
+                                strokeWidth={2}/>
                         </a>
                     </div>
 
                     <div className="icon-container">
                         <a href="">
                             <FiLinkedin 
-                                className={LIIClasses}
-                                size={23}
-                                stroke={LIIconColor}
-                                strokeWidth={1.7}/>
+                                size={26}
+                                stroke={initialIconColor}
+                                strokeWidth={1.6}/>
                         </a>
                     </div>
 
-                    <div className="foot-line"></div>
+                    <div style={{backgroundColor: lineColor}} className="foot-line-1"></div>
+                </div>
+
+                <div className="foot-icon-flex" >
+                    <a style={{color: emailTag}} className="emailTag" href="mailto:name@email.com">
+                        jbey078@gmail.com
+                    </a>
+
+                    <div style={{backgroundColor: lineColor}} className="foot-line-2"></div>
                 </div>
                 
             </div>

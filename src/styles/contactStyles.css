@@ -103,3 +103,17 @@
 .email {
     font-style: italic;
 }
+
+.submitted {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    font-family: 'Wotfard-Regular';
+    opacity: 0;
+}
+
+.submitted > span {
+    padding: 15px 10px 15px 10px;
+    border-radius: 5px;
+    border: 3px solid rgb(77, 173, 39);
+}

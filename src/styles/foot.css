@@ -4,7 +4,7 @@
     justify-content: center;
     position: fixed;
     bottom: 0;
-    height: 200px;
+    height: 290px;
     border: none;
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@
 }
 
 .foot-flex {
-    width: 90%;
+    width: 95%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -24,10 +24,35 @@
     align-items: center;
 }
 
-.foot-line {
+.foot-line-1, 
+.foot-line-2 {
+    margin-top: 30px;
     width: 2px;
-    height: calc(100%);
-    background-color: grey;
+    height: 100%;
+}
+
+.emailTag {
+    white-space: nowrap;
+    text-decoration: none;
+    outline: none;
+    writing-mode: vertical-lr;
+    align-self: center;
+    font-family: "Wotfard-Regular";
+    justify-self: center;
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    letter-spacing: 2px;
+    transition: all .2s;
+}
+
+.emailTag:visited,
+.emailTag:link {
+    text-decoration: none;
+}
+
+.emailTag:hover {
+    color: rgb(41, 116, 230) !important;
+    transform: translateY(-6px);
 }
 
 .icon-container {
@@ -43,8 +68,7 @@
     z-index: -1;
     position: relative;
     bottom: 0;
-    transition: all 0.3s;    
-    transform: translateY(0px);
+    transition: all 0.2s;    
 }
 
 .icon-anim-up {

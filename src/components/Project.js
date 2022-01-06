@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { THEME_TOGGLE_SPEED } from "../assets/constants";
 import { FiExternalLink } from "react-icons/fi";
 import { FiGithub } from "react-icons/fi";
-import { useState } from "react";
 
 const Title = styled.div`
     transition: all ${THEME_TOGGLE_SPEED}s;
@@ -23,9 +22,6 @@ const Ft = styled.div`
 
 export default function Project({ project, idx }) {
 
-    const [linkClass, setLinkClass] = useState("");
-    const [githubClass, setGithubClass] = useState("");
-
     const imgPos = (idx % 2) === 0 ? {left: 0} : {right: 0};
     const textAlign = (idx % 2) === 0 ? "end" : "start";
     const horizontalAlign = (idx % 2) === 0 ? "flex-end" : "flex-start";
@@ -36,7 +32,7 @@ export default function Project({ project, idx }) {
         <div className="project" style={{justifyContent: horizontalAlign}}>
             <div style={imgPos} className="project-img-container">
                 <a className="project-a-ref" href={project.link}>
-                    <img className="project-img" src={project.imageURL} alt=""></img>
+                    <img style={{filter: `brightness(${project.brightness}%)`}} className="project-img" src={project.imageURL} alt=""></img>
                 </a>
             </div>
             <div className="project-flex" style={{ alignItems: horizontalAlign}}>
@@ -44,9 +40,9 @@ export default function Project({ project, idx }) {
                 <Description className="project-desc" style={{textAlign: textAlign, padding: padding}}>{project.description}</Description>
                 <div className="project-ft-flex">
                     {
-                        project.featured.map((ft) => {
+                        project.featured.map((ft, idx) => {
                             return (
-                                <Ft style={{margin: ftPadding}} className="ft">{ft}</Ft>
+                                <Ft key={idx} style={{margin: ftPadding}} className="ft">{ft}</Ft>
                             );
                         })
                     }
@@ -57,7 +53,7 @@ export default function Project({ project, idx }) {
                             project.link !== null 
                             ?
                             <a href={project.link}>
-                            <FiExternalLink className={`project-icon ${linkClass}`} style={{margin: ftPadding}} size={26}/>
+                            <FiExternalLink className={`project-icon`} style={{margin: ftPadding}} size={26}/>
                             </a>
                             :
                             <></>
@@ -67,7 +63,7 @@ export default function Project({ project, idx }) {
                             project.github !== null
                             ?
                             <a href={project.github}>
-                                <FiGithub className={`project-icon ${githubClass}`} style={{margin: ftPadding}} size={24}/>
+                                <FiGithub className={`project-icon`} style={{margin: ftPadding}} size={24}/>
                             </a>
                             :
                             <></>

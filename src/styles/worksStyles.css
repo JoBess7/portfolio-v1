@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 150px 0 150px 0;
+    margin: 150px 0 0 0;
 }
 
 .works-flex {
@@ -74,9 +74,7 @@
     stroke: grey;
     stroke-width: 2;
 }
-.project-icon:visited {
-    stroke: rgb(41, 116, 230);
-}
+.project-icon:visited,
 .project-icon:hover {
     stroke: rgb(41, 116, 230);
 }

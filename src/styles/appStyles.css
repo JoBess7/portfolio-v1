@@ -47,7 +47,7 @@ body {overflow-x: hidden;}
 
 .element-hidden {
     opacity: 0 !important;
-    transform: translateY(100px) !important;
+    transform: translateY(30px) !important;
 }
 
 .opacity0 {opacity: 0;}
@@ -62,7 +62,7 @@ body {overflow-x: hidden;}
     transition: opacity .5s;
     position: absolute;
     z-index: 10000;
-    background-color: rgb(246, 245, 240);
+    background-color: #0a192f;
 }
 
 .loader-flex {
@@ -97,4 +97,13 @@ body {overflow-x: hidden;}
 
 .no-scroll {
     overflow: hidden !important;
+}
+
+.repo-info {
+    font-family: "Wotfard-Regular";
+    margin: 70px 0 20px 0;
+}
+
+.transit {
+    transition: all .5s;
 }

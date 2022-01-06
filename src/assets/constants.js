@@ -48,16 +48,18 @@ export const PROJECTS = [
         link: "https://2021.igem.org/Team:ULaval",
         github: "https://github.com/JoBess7/iGEM-Team-ULaval-2021",
         featured: ["HTML", "CSS", "JQuery"],
-        imagePath: "igem_logo.png"
+        imagePath: "igem_logo.png",
+        brightness: "14"
     },
     {
         title: "Personal Portfolio",
         description: "The second iteration of my personal portfolio.",
         imageURL: portfolio,
-        link: "null",
-        github: "",
+        link: "https://jobess7.com/",
+        github: "https://github.com/JoBess7/portfolio-v2",
         featured: ["HTML", "CSS", "React.js"],
-        imagePath: "../assets/images/igem_logo.png"
+        imagePath: "../assets/images/igem_logo.png",
+        brightness: "25"
     },
     {
         title: "",
@@ -66,7 +68,8 @@ export const PROJECTS = [
         link: null,
         github: null,
         featured: [],
-        imagePath: "../assets/images/igem_logo.png"
+        imagePath: "../assets/images/igem_logo.png",
+        brightness: ""
     },
 ]
 

@@ -6,6 +6,7 @@ import Foot from "./foot/Foot";
 import Skills from "./skills/Skills";
 import Contact from "./contact/Contact";
 import Works from "./works/Works";
+import RepoInfo from "./repoInfo/RepoInfo";
 import { useInView } from "react-intersection-observer";
 
 import "../styles/reusables.css"
@@ -70,11 +71,12 @@ export default function Splash(props) {
             <About/>
             
             <Foot
-                // Key forces a rerender of child, in this case Foot.
+                // Key forces a rerender
                 key={props.theme}
                 theme={theme}
-                initialIconColor={"grey"}
-                animatedIconColor={"rgb(41, 116, 230)"}
+                initialIconColor={props.theme === "dark" ? "rgba(189, 199, 199, 1)" : "rgba(103, 103, 103, 1)"}
+                emailTag={props.theme === "dark" ? "rgba(189, 199, 199, 1)" : "rgba(0, 0, 0, 1)"}
+                lineColor={props.theme === "dark" ? "rgba(189, 199, 199, 1)" : "rgba(103, 103, 103, 1)"}
             />
 
             <Skills
@@ -84,6 +86,8 @@ export default function Splash(props) {
             <Works/>
 
             <Contact/>
+
+            <RepoInfo/>
         </Page>
     );
 }

@@ -12,12 +12,17 @@ import { useInView } from "react-intersection-observer";
 const NoSubmit = styled.div`
     transition: all .2s;
     color: ${props => props.theme.title}
+`;
+
+const Submit = styled.div`
+    transition: all .2s;
+    color: ${props => props.theme.title}
 `
 
 export default function Contact(props) {
 
     const [ scratcherRef, scratcherInView ] = useInView({
-        threshold: 0,
+        threshold: .25,
         triggerOnce: true
     });
 
@@ -25,6 +30,7 @@ export default function Contact(props) {
     const [noSubmitClasses, setNoSubmitClasses] = useState("opacity0");
     const [loaderClasses, setLoaderClasses] = useState("");
     const [formClasses, setFormClasses] = useState("");
+    const [submitClasses, setSubmitClasses] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -39,7 +45,7 @@ export default function Contact(props) {
         .then((result) => {
             console.log(result);
             setLoaderClasses("loader-disappear");
-            setFormClasses("form-appear");
+            setSubmitClasses("opacity1");
         },
         (error) => {
             setLoaderClasses("loader-disappear");
@@ -64,6 +70,10 @@ export default function Contact(props) {
                                 If the problem persists, you can reach me at <span className="email">jbey078@gmail.com</span>.
                             </div>   
                         </NoSubmit>
+
+                        <Submit className={"submitted " + submitClasses}>
+                            <span>Message submitted. I'll get back to you soon!</span>
+                        </Submit>
 
                         <div style={{opacity: 0}} className={"loader-flex " + loaderClasses}>
                             <SimpleLoader/>
