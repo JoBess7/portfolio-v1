@@ -14,27 +14,24 @@ export default function Foot({ initialIconColor, animatedIconColor }) {
         <div className="foot">
             <div className="foot-flex">
                 <div className="foot-icon-flex" >
-                    <div className="icon-container"
-                        onMouseEnter={() => {setGithubClasses("icon icon-anim-up"); setGithubIconColor(animatedIconColor);}}
-                        onMouseOut={() => {setGithubClasses("icon icon-anim-down"); setGithubIconColor(initialIconColor);}}>
+                    
+                    <div className="icon-container">
                         <a href="">
                             <FiGithub 
                             className={githubClasses}
                             size={23}
                             stroke={githubIconColor}
-                            strokeWidth={1.7}/>
+                            strokeWidth={2}/>
                         </a>
                     </div>
 
-                    <div className="icon-container"
-                        onMouseEnter={() => {setLIIClasses("icon icon-anim-up"); setLIIconColor(animatedIconColor);}}
-                        onMouseOut={() => {setLIIClasses("icon icon-anim-down"); setLIIconColor(initialIconColor);}}>
+                    <div className="icon-container">
                         <a href="">
                             <FiLinkedin 
                                 className={LIIClasses}
                                 size={23}
                                 stroke={LIIconColor}
-                                strokeWidth={1.3}/>
+                                strokeWidth={1.7}/>
                         </a>
                     </div>
 

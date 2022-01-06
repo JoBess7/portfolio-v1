@@ -52,16 +52,17 @@
 }
 
 .project-img {
+    box-shadow: rgba(0, 0, 0, 1) 0px 12px 25px -12px;
     transition: all .5s;
     top: 0;
     border-radius: 5px;
     z-index: 1;
     width: 100%;
     height: auto;
-    border: 1px solid #0d1f34;
 }
 .project-img:hover {
     transform: scale(1.02);
+    box-shadow: rgba(0, 0, 0, 1) 0px 12px 25px -6px;
 }
 
 .project-link-flex {

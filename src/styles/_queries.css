@@ -86,7 +86,8 @@ and (max-width: 1000px) {
     .project-img-container {position: relative; width: 100%;}
     .project-img:hover {transform: none;}
     .project-name {color: #c1cceb !important; text-shadow: none !important;}
-    .ft {color: #a5b1ce !important;}
+    .ft {color: #a5b1ce !important; margin: 0 20px 0 0 !important;}
+    .project-icon {margin: 0 20px 0 0 !important;}
 }
 
 @media screen 
@@ -114,6 +115,10 @@ and (max-width: 1200px) {
 @media screen
 and (min-width: 1201px) {
     .project-works-title {margin-bottom: 100px;}
+}
+@media screen
+and (min-width: 1300px) {
+    .project {margin-bottom: 230px;}
 }
 
 /* ---------------- CONTAINER5 --------------------- */

@@ -12,7 +12,7 @@ const Title = styled.div`
 const Description = styled.div`
     transition: all ${THEME_TOGGLE_SPEED}s;
     background-color: ${props => props.theme.projectBackground};
-    box-shadow: ${props => props.theme.projectShadow};
+    box-shadow: rgba(0, 0, 0, 1) 0px 12px 25px -12px;
     color: ${props => props.theme.projectDescription};
 `
 
@@ -52,12 +52,27 @@ export default function Project({ project, idx }) {
                     }
                 </div>
                 <div className="project-link-flex">
-                        <a href={project.link}>
+
+                        {
+                            project.link !== null 
+                            ?
+                            <a href={project.link}>
                             <FiExternalLink className={`project-icon ${linkClass}`} style={{margin: ftPadding}} size={26}/>
-                        </a>
-                        <a href={project.github}>
-                            <FiGithub className={`project-icon ${githubClass}`} style={{margin: ftPadding}} size={24}/>
-                        </a>
+                            </a>
+                            :
+                            <></>
+                        }
+
+                        {
+                            project.github !== null
+                            ?
+                            <a href={project.github}>
+                                <FiGithub className={`project-icon ${githubClass}`} style={{margin: ftPadding}} size={24}/>
+                            </a>
+                            :
+                            <></>
+                        }
+
                     </div>
             </div>
         </div>

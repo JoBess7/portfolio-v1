@@ -15,6 +15,7 @@ import VSCodeLogo from "./images/vscode_logo.png";
 import netbeansLogo from "./images/netbeans_logo.png";
 import mustache from "./images/mustache.png";
 import construction from "./images/under_construction.png";
+import portfolio from "./images/portfolio.png";
 
 export const IMAGES = [
     igemLogo,
@@ -32,7 +33,8 @@ export const IMAGES = [
     VSCodeLogo,
     netbeansLogo,
     mustache,
-    construction
+    construction,
+    portfolio
 ]
 
 export const HEADER_WIDTH = 95;
@@ -49,20 +51,20 @@ export const PROJECTS = [
         imagePath: "igem_logo.png"
     },
     {
-        title: "",
-        description: "Coming soon...",
-        imageURL: null,
-        link: "",
+        title: "Personal Portfolio",
+        description: "The second iteration of my personal portfolio.",
+        imageURL: portfolio,
+        link: "null",
         github: "",
-        featured: [],
+        featured: ["HTML", "CSS", "React.js"],
         imagePath: "../assets/images/igem_logo.png"
     },
     {
         title: "",
         description: "Coming soon...",
         imageURL: null,
-        link: "",
-        github: "",
+        link: null,
+        github: null,
         featured: [],
         imagePath: "../assets/images/igem_logo.png"
     },
