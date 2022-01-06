@@ -69,7 +69,7 @@ function App() {
 
   const [timerDone, setTimerDone] = useState(false);
   const [loadingClass, setLoadingClass] = useState(" opacity1");
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   useEffect(() => {
     setTimeout(() => {

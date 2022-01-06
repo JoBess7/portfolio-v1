@@ -17,22 +17,25 @@ export default function Foot({ initialIconColor, animatedIconColor }) {
                     <div className="icon-container"
                         onMouseEnter={() => {setGithubClasses("icon icon-anim-up"); setGithubIconColor(animatedIconColor);}}
                         onMouseOut={() => {setGithubClasses("icon icon-anim-down"); setGithubIconColor(initialIconColor);}}>
-                        <FiGithub 
-                        className={githubClasses}
-                        size={23}
-                        stroke={githubIconColor}
-                        strokeWidth={1.7}/>
+                        <a href="">
+                            <FiGithub 
+                            className={githubClasses}
+                            size={23}
+                            stroke={githubIconColor}
+                            strokeWidth={1.7}/>
+                        </a>
                     </div>
 
                     <div className="icon-container"
                         onMouseEnter={() => {setLIIClasses("icon icon-anim-up"); setLIIconColor(animatedIconColor);}}
                         onMouseOut={() => {setLIIClasses("icon icon-anim-down"); setLIIconColor(initialIconColor);}}>
-
-                        <FiLinkedin 
-                            className={LIIClasses}
-                            size={23}
-                            stroke={LIIconColor}
-                            strokeWidth={1.3}/>
+                        <a href="">
+                            <FiLinkedin 
+                                className={LIIClasses}
+                                size={23}
+                                stroke={LIIconColor}
+                                strokeWidth={1.3}/>
+                        </a>
                     </div>
 
                     <div className="foot-line"></div>

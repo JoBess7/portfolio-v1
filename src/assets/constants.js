@@ -44,7 +44,7 @@ export const PROJECTS = [
         description: "Fully responsive website with more than 15 static sub URLS, built in 3 weeks in the context of iGEM, a worldwide synthetic biology competition gathering more than 7000 students every year",
         imageURL: igemLogo,
         link: "https://2021.igem.org/Team:ULaval",
-        github: "repo",
+        github: "https://github.com/JoBess7/iGEM-Team-ULaval-2021",
         featured: ["HTML", "CSS", "JQuery"],
         imagePath: "igem_logo.png"
     },
@@ -70,7 +70,7 @@ export const PROJECTS = [
 
 export const ABOUT = 
 {
-    description: "Hi! I'm a second year software engineering student at Laval University in Quebec, Canada. I'm currently maintaining a 4.03 GPA. I love using technologies such as JavaScript, HTML and CSS to create amazing websites. At the moment, I am looking into relational database models and JavaScript frameworks such as React.js. Currently, I have the privilege of working at Alcoa as a system analyst. When I'm not coding, you'll most likely find me playing video games or on the court shooting some hoops.",
+    description: "Hi! I'm a second year software engineering student at Laval University in Quebec, Canada. I'm currently maintaining a 4.03 GPA. I love using technologies such as JavaScript, HTML and CSS to create amazing websites. At the moment, I am looking into relational database models and JavaScript frameworks such as React.js and Next.js. I have the privilege of working at Alcoa as a system analyst. When I'm not coding, you'll most likely find me playing video games or on the court shooting some hoops.",
     image: pictureOfMe      
 }
 
