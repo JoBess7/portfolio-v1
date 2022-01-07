@@ -7,8 +7,9 @@
     align-items: center;
     justify-content: center;
     z-index: 999;
-    filter: blur(.6);
     opacity: .95;
+    transition: all .3s;
+    top: 0;
 }
 
 .initial-trigger {
@@ -288,4 +289,8 @@
 
 .header-hidden-comp {
     opacity: 0;
+}
+
+.h-invis {
+    top: -85px;
 }

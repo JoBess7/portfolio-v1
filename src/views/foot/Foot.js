@@ -17,7 +17,7 @@ export default function Foot({ lineColor, emailTag, initialIconColor }) {
                     </div>
 
                     <div className="icon-container">
-                        <a href="">
+                        <a href="https://jobess7.com/">
                             <FiLinkedin 
                                 size={26}
                                 stroke={initialIconColor}

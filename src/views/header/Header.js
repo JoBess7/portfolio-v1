@@ -1,5 +1,5 @@
 import { DarkModeSwitch } from "react-toggle-dark-mode";
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useCallback} from "react";
 import Burger from "./Burger";
 import Linker from "./Linker";
 import Heart from "../../components/Heart";
@@ -21,18 +21,34 @@ function Header({ theme, inView, changeTheme }) {
     const [canAnimate, setCanAnimate] = useState(true);
     const [isDarkMode, setIsDarkMode] = useState(true);
     const [burgerOpened, setBurgerOpened] = useState(false);
+    const [headerClasses, setHeaderClasses] = useState("h-visible");
 
-    useEffect(() => {
-        window.addEventListener('scroll', (e) => scrollEvent(e));
+    const [y, setY] = useState(window.scrollY);
 
-        return () => {
-            window.removeEventListener('scroll', (e) => scrollEvent(e));
+    const handleNavigation = useCallback((e) => {
+        const window = e.currentTarget;
+
+        // Scrolling up
+        if (y > window.scrollY && headerClasses === "h-invis") {
+            setHeaderClasses("h-visible");
         }
-    }, []);
+        // Scrolling down
+        else if (y < window.scrollY && headerClasses === "h-visible") {
+            setHeaderClasses("h-invis");
+        }
 
-    function scrollEvent() {
-        // handle scroll
-    }
+        setY(window.scrollY);
+      }, [y]
+    );
+  
+    useEffect(() => {
+      setY(window.scrollY);
+      window.addEventListener("scroll", handleNavigation);
+  
+      return () => {
+        window.removeEventListener("scroll", handleNavigation);
+      };
+    }, [handleNavigation]);
 
     function animateButton() {
         setCanAnimate(false);
@@ -46,7 +62,7 @@ function Header({ theme, inView, changeTheme }) {
     }
 
     return (
-        <HeaderFlex className={`header`}>
+        <HeaderFlex className={`header ${headerClasses}`}>
             <HeaderContainer className="header-container">
                 <div className={inView ? "burger-flex header-show-comp" : "burger-flex header-hidden-comp"}>
                     <Burger sendBurgerState={sendBurgerState} theme={theme}/>
