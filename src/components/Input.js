@@ -11,7 +11,7 @@ const Inputy = styled.input`
     border-bottom: 2px solid ${props => props.theme.title};
 `;
 
-export default function Input({val, display, marginbottom, margintop, what, id}) {
+export default function Input({action, display, marginbottom, margintop, what, id}) {
 
     const [valid, setValid] = useState(false);
     const [iconClasses, setIconClasses] = useState("icon-small");
@@ -26,6 +26,8 @@ export default function Input({val, display, marginbottom, margintop, what, id})
             setIconClasses("icon-small");
             setValid(false);
         }
+        
+        action(what, newValue);
     }
 
     return(
@@ -35,7 +37,7 @@ export default function Input({val, display, marginbottom, margintop, what, id})
                 onChange={(event) => {modifyValue(event)}} 
                 placeholder=" " 
                 className="input" 
-                type="text" 
+                type="text"
                 autoComplete="off" 
                 autoCapitalize="true" 
                 id={id} 
