@@ -28,46 +28,6 @@
     transition: all 0.5s ease-out;
 }
 
-.not-activated {
-    transform: scale(.05);
-}
-
-.heart-activate {
-    animation: heart-activate .2s ease-in-out forwards 1;
-}
-
-@keyframes heart-activate {
-    0% {transform: scale(.05); }
-    85% {transform: scale(12); }
-    100% {transform: scale(9.5); }
-}
-
-.heart-deactivate {
-    animation: heart-deactivate .3s ease-out forwards 1;
-}
-
-@keyframes heart-deactivate {
-    0% {transform: scale(9.5);}
-    10% {transform: scale(11.5);}
-    100% {transform: scale(0);}
-}
-
-.heart-stroke {
-    transition: all 0.5s;
-}
-
-.darky {
-    fill: white;
-}
-
-.lighty {
-    fill: black;
-}
-
-.activated-stroke {
-    fill: rgb(255, 23, 23);
-}
-
 
 .like-indicator {
     position: absolute;
@@ -78,24 +38,31 @@
     pointer-events: none;
 }
 
-.like-indicator-show {
-    display: unset;
-    animation: like-show 3s ease-out forwards 1;
-}
-
-@keyframes like-show {
-    0% {opacity: 0; display: flex;}
-    10% {opacity: 1;}
-    99% {display: none; transform: scale(1);}
-    100% {transform: scale(0);}
-}
-
 .heart-flex {
     display: flex;
     transition: all 0.5s;  
     transition-delay: 1s;
 }
 
+.heart-up {
+    animation: heart-up .20s linear 1 forwards;
+}
+@keyframes heart-up {
+    0% {transform: scale(0);}
+    95% {transform: scale(13);}
+    100% {transform: scale(10);}
+}
+.heart-down {
+    animation: heart-down .20s linear 1 forwards;
+}
+@keyframes heart-down {
+    0% {transform: scale(10);}
+    15% {transform: scale(13);}
+    100% {transform: scale(0);}
+}
+
+.invis-path {opacity: 0 !important;}
+.heart-path {transition: opacity .15s;}
 /* -------------------- SectionTitle.js ---------------------*/
 
 .section-title-flex {

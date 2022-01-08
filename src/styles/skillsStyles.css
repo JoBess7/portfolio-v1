@@ -3,7 +3,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 100px 0 200px 0;
+    margin: 0 0 200px 0;
+    padding-top: 100px;
 }
 
 .skills-flex {

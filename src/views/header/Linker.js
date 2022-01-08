@@ -3,7 +3,8 @@ import { THEME_TOGGLE_SPEED } from "../../assets/constants";
 
 const Link = styled.div`
     transition: all ${THEME_TOGGLE_SPEED}s;
-    color: ${props => props.theme.headerLink}
+    color: ${props => props.theme.headerLink};
+    user-select: none;
 `
 
 function Linker(props) {
@@ -41,7 +42,7 @@ function Linker(props) {
             </Link> 
 
             <Link 
-                onClick={() => scrollElementIntoView(".works-section")} 
+                onClick={() => scrollElementIntoView(".works")} 
                 style={thirdLinkStyle} 
                 className={`link ${burgerOpened ? "linkAppear" : "linkDisappear"}`}>
                     Works

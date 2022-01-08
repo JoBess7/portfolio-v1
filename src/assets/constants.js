@@ -16,6 +16,7 @@ import netbeansLogo from "./images/netbeans_logo.png";
 import mustache from "./images/mustache.png";
 import construction from "./images/under_construction.png";
 import portfolio from "./images/portfolio.png";
+import PBILogo from "./images/powerbi_logo.png";
 
 export const IMAGES = [
     igemLogo,
@@ -34,7 +35,8 @@ export const IMAGES = [
     netbeansLogo,
     mustache,
     construction,
-    portfolio
+    portfolio,
+    PBILogo
 ]
 
 export const HEADER_WIDTH = 95;
@@ -181,6 +183,14 @@ const OTHER = [
         imageWidth: "33px",
         imageHeight: "37px",
         color: "rgb(159, 220, 0)",
+    },
+    {
+        name: "Power BI",
+        level: "90",
+        image: PBILogo,
+        imageWidth: "33px",
+        imageHeight: "34px",
+        color: "#cb7f04",
     }
 ];
 
