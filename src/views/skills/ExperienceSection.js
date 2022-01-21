@@ -4,7 +4,6 @@ export default function ExperienceSection({title, visible, experiences}) {
             {experiences.map((exp, idx) => {
                 return(
                     <div key={idx} className={`exp-flex ${visible ? "opacity1" : "opacity0"}`}>
-
                         <div className="exp-img-container">
                             <img 
                                 src={exp.image}
